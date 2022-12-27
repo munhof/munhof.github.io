@@ -1,0 +1,93 @@
+body{background-color: rgb(39, 38, 38);
+    color: whitesmoke;
+}
+
+#titulo{margin-bottom: 20px;}
+
+#quien_soy{margin-top: 30px;
+            margin-bottom: 20px;}
+
+#titulo_quien_soy{margin-bottom: 40px;
+margin-top: 10px;}
+
+.carta-presentacion{margin-bottom: 10px;
+margin-top: 10px;}
+
+.seccion{
+margin-top: 10px;
+margin-bottom: 30px;
+padding-top: 10px;
+}
+
+
+
+/*efecto caja de luz extraido de*/
+/*https://www.desarrollolibre.net/blog/css/creando-una-caja-de-luz-difuminada-con-css*/
+
+/*crea la luz*/
+.back_light:after {
+	position: absolute;
+	content: "";
+	top: 0vw;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	transform: scale(1.05);
+}
+
+/*genera el efecto de dispercion con blur*/
+.back_light:after {
+	-webkit-filter: blur(0vw);
+	-moz-filter: blur(0vw);
+	-ms-filter: blur(0vw);
+	filter: blur(1vw);
+	background: linear-gradient(270deg, #0fabff, #7e0fff);
+	background-size: 200% 200%;
+	animation: animateGlow 10s ease infinite;
+}
+
+/*hace la animacion*/
+@keyframes animateGlow {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes textColor {
+	0% {
+		color: #7e0fff;
+	}
+	50% {
+		color: #0fabff;
+	}
+	100% {
+		color: #7e0fff;
+	}
+}
+/*fin del efecto*/
+
+@media(768px <= width<= 991px){
+	#carta-presentacion{
+		height: 320px;
+	}
+}
+
+@media(992px<=width<1440px){
+	.carta-presentacion{
+		height: 350px;
+	}
+}
+
+@media(1440px<=width){
+	.carta-presentacion{
+		height: 300px;
+	}
+}

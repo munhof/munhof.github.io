@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+header p {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    color: #77aaff;
+}
+
+.section {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.job-entry {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #77aaff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.job-entry h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el botón al final */
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.project-card p {
+    font-size: 0.9em;
+    color: #666;
+    flex-grow: 1; /* Permite que la descripción ocupe el espacio disponible */
+}
+
+.project-card a.button {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px; /* Espacio entre descripción y botón */
+    text-align: center;
+}
+
+.project-card a.button:hover {
+    background: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
