@@ -31,13 +31,13 @@
     </header>
 
     <div id="titulo" class="container container-lg">
-        <h1 class="text-center">MunhoF &lt;dev&gt; </h1>     
+        <h1 class="text-center">MunhoF &lt;dev&gt;</h1>     
     </div>
 
 
     <section id="quien_soy" class="seccion">
 
-    <div id="titulo_quien_soy" class="container-fluid container-fluid-lg" >
+    <div id="titulo_quien_soy" class="container-fluid container-fluid-lg titulo-seccion" >
         <h2 class="text-center">¿Quien soy?</h2>         
     </div>
 
@@ -88,24 +88,25 @@
     </div>
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="https://img.freepik.com/vector-premium/gato-lindo-dibujado-mano-ilustracion-caja_118282-154.jpg?w=740" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="https://img.freepik.com/vector-premium/gato-lindo-dibujado-mano-ilustracion-caja_118282-154.jpg?w=740" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsZAFrjDAT3P84vVLWU6H_O9QlHSSx51rxwab6m4tGM20jSlKE_poWtEHELDNTnOWBDew&usqp=CAU" alt="Third slide">
-          </div>
+            <div class="carousel-item active text-center">
+                <img class="rounded mx-auto d-block w-50" src="https://www.shutterstock.com/image-vector/cute-cat-sitting-on-laptop-260nw-1453678082.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item text-center">
+                <img class="rounded mx-auto d-block w-50" src="https://img.freepik.com/vector-premium/gato-lindo-dibujado-mano-ilustracion-caja_118282-154.jpg?w=740" alt="Second slide">
+            </div>
+            <div class="carousel-item text-center">
+                <img class="rounded mx-auto d-block w-50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsZAFrjDAT3P84vVLWU6H_O9QlHSSx51rxwab6m4tGM20jSlKE_poWtEHELDNTnOWBDew&usqp=CAU" alt="Third slide">
+            </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
         </a>
       </div>
 
@@ -114,19 +115,18 @@
     </div>
 
     <div id="otros proyectos" class="container-fluid container-fluid-lg" >
-        <h6 class="text-center">Bouquet of flowers
-            Bag of popcorn
-            Pillow
-            Can of peas
-            Beef
-            Quartz crystal
+        <h6 class="text-center">
+            <a href="">Bouquet of flowers</a>
+            <a href="">Bag of popcorn</a> 
+            <a href="">Pillow</a>
+            <a href="">Can of peas</a>
+            <a href="">Beef</a>
+            <a href="">Quartz crystal</a>
         </h6>         
     </div>
 
 
-    </section id="seccion-contactame" class="container">
-
-    <section id="contactame">
+    <section id="contactame" class="container">
 
     <h2  class="text-center" id="titulo-contactame">
         Contactame
@@ -136,33 +136,33 @@
         Si deseas contacarme para realizar algún proyecto o duda puedes hacerlo enviando un mensaje mediante este formulario
     </p>
     
-    <form>
+    <form id="formulario-contacto">
         <div class="row mb-3">
             <div class="col-1"></div>
             <label for="inputEmail3" class="col-sm-1 col-form-label">Email</label>
-            <div class="col-8">
+            <div class="col col-md-8">
                 <input type="email" placeholder="ejemplo@mail.com" class="form-control" id="inputEmail3">
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-1"></div>
             <label for="inputAsunto3" class="col-sm-1 col-form-label">Asunto</label>
-            <div class="col-8">
+            <div class="col col-md-8">
                 <input type="asunto" placeholder="Asunto" class="form-control" id="inputPassword3">
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-1"></div>
             <label for="colFormLabel" class="col-sm-1 col-form-label">Cuerpo</label>
-            <div class="col-8">
+            <div class="col col-md-8">
                 <textarea class="form-control" placeholder="Cuerpo" id="floatingTextarea2" style="height: 100px"></textarea>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-1"></div>
             <label for="colFormLabel" class="col-sm-1 col-form-label"></label>
-            <div class="col-8 d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="submit" class="btn btn-primary me-md-2">Enviar</button>
+            <div class="col col-md-8 d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-primary me-md-2"> <a href="#contactame"></a>Enviar</button>
             </div>
         </div>
     </form>
