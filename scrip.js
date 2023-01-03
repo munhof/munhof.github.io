@@ -1,2 +1,2 @@
-let estado_nav = document.getElementsById("navbarNavAltMarkup").className;
+let estado_nav = document.getElementById("navbarNavAltMarkup").className;
 console.log(estado_nav);
