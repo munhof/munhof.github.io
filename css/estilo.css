@@ -10,7 +10,7 @@ body{background-color: rgb(39, 38, 38);
 #titulo_quien_soy{margin-bottom: 40px;
 margin-top: 10px;}
 
-#carta-presentacion{margin-bottom: 10px;
+.carta-presentacion{margin-bottom: 10px;
 margin-top: 10px;}
 
 .seccion{
@@ -73,3 +73,21 @@ padding-top: 10px;
 	}
 }
 /*fin del efecto*/
+
+@media(768px <= width<= 991px){
+	#carta-presentacion{
+		height: 400px;
+	}
+}
+
+@media(992px<=width<1440px){
+	.carta-presentacion{
+		height: 500px;
+	}
+}
+
+@media(1440px<=width){
+	.carta-presentacion{
+		height: 350px;
+	}
+}
