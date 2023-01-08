@@ -82,12 +82,12 @@ padding-top: 10px;
 
 @media(992px<=width<1440px){
 	.carta-presentacion{
-		height: 300px;
+		height: 350px;
 	}
 }
 
 @media(1440px<=width){
 	.carta-presentacion{
-		height: 350px;
+		height: 300px;
 	}
 }
