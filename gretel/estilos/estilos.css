@@ -1,6 +1,4 @@
-body{
-  margin: 5px auto;
-}
+
 /*
 generales
 */
@@ -34,7 +32,6 @@ basada en las compartidas por 23 school*/
   overflow: hidden;
   opacity: 100%;
   background-color: bisque;
-
 }
 
 .topnav a {
@@ -212,7 +209,7 @@ basado en la idea dada por w3 school*/
 /*Galeria, idea del codigo: https://www.youtube.com/watch?v=l2VllYk56lM*/
 
 .galery{
-  width: 100%;
+  width: 90%;
   max-width: 1600px;
   display: grid;
   margin:0 auto;
@@ -241,12 +238,13 @@ basado en la idea dada por w3 school*/
 /*estilos forms google*/
 
 .form{
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
   justify-content: center;
   align-items: center;
+  margin: 0 auto
 }
 
 .form_group{
