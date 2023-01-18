@@ -294,7 +294,7 @@ basado en la idea dada por w3 school*/
   position: absolute;
   top: 8;
   left: 5px;
-  transform: translateY(-30px);
+  transform: translateY(-2em);
   transition: transform .5s, color .3s;
 }
 
@@ -307,7 +307,7 @@ basado en la idea dada por w3 school*/
 
 .textarea:focus + .textarea_label, 
 .textarea:not(:placeholder-shown) + .textarea_label{
-  transform: translateY(-50px) scale(.9);
+  transform: translateY(-3em) scale(.9);
   transform-origin:top left ;
   --color: #3866f2;
 }
