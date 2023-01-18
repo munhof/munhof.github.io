@@ -319,6 +319,22 @@ basado en la idea dada por w3 school*/
   float: right;
 }
 
+/*redes sociales*/
+
+.container-redes-sociales{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.container-redes-sociales li{
+  min-width: 60px;
+  max-width: 500px;
+  flex: 25%
+}
+
 /*Medias Querys*/
 
 /*topnav*/
