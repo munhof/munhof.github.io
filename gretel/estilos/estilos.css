@@ -426,7 +426,7 @@ basado en la idea dada por w3 school*/
 .footer-logo{
   min-width: 200px;
   max-width: 250px;
-  flex:40%;
+  flex:60%;
   filter: grayscale(100%);
 
 }
@@ -444,44 +444,20 @@ basado en la idea dada por w3 school*/
 }
 
 .footer-menu ul{
-  margin: 0 auto;
   padding: 2px;
   list-style: none;
+  text-align: center;
 }
 
 .footer-menu ul li{
-  display: inline-block;
-  text-align: center;
   margin: 5px 5px;
   padding: 10px;
 }
 
-.footer-menu{
-  min-width: 200px;
-  flex: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 0;
-}
 
-.footer-redes-sociales ul{
-  margin: 0 auto;
-  padding: 2px;
-  list-style: none;
-}
-
-
-.footer-redes-sociales ul li{
-  display: inline-block;
+.footer-copyright{
   text-align: center;
-  margin: 5px 5px;
-  padding: 10px;
-}
-
-.footer-redes-sociales ul li a{
-  display: block;
+  font-size: 18px;
 }
 
 /*topnav*/
