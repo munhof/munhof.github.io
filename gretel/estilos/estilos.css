@@ -244,7 +244,8 @@ basado en la idea dada por w3 school*/
   gap: 2em;
   justify-content: center;
   align-items: center;
-  margin: 0 auto
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .form_group{
@@ -276,6 +277,8 @@ basado en la idea dada por w3 school*/
   border: none;
   outline: none;
   border-bottom: 1px solid var(--color);
+  resize: none;
+  overflow: hidden;
 }
 
 .form_label{
@@ -321,21 +324,89 @@ basado en la idea dada por w3 school*/
 
 /*redes sociales*/
 
+
 .container-redes-sociales{
+  width: 98%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 3em;
-  margin: 0 auto;
-  width: 90%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.container-redes-sociales li{
-  min-width: 60px;
-  max-width: 500px;
-  flex: 25%
+.container-redes-sociales ul li{
+  display: inline-block;
+  margin: 5px 5px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  
 }
 
-/*Medias Querys*/
+.container-redes-sociales ul li a{
+  display: block;
+  padding: 0 10px;
+  background-color: #333;
+  color: #f2f2f2;
+  line-height: 80px;
+  font-size: 18px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
+  transition: .2s;
+}
+
+.container-redes-sociales ul:hover a{
+  filter: blur(2px);
+}
+
+.container-redes-sociales ul li a:hover{
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .8);
+  filter: none;
+}
+
+:root{
+  --facebook: #3866f2;
+  --twitter: #1DA1F2 ;
+  --instagram: #9E37B8 ;
+  --youtube: #FF0000 ;
+  --tumblr: #34526f  ;
+  --behance: #4a6ccf ;
+  --twitch: #6441a5 ;
+  --cafecito: #8FA2CC;
+}
+
+
+.container-redes-sociales ul li .facebook:hover{
+  background-color: var(--facebook);
+}
+
+.container-redes-sociales ul li .instagram:hover{
+  background: radial-gradient(circle at 30% 107%, #FED372 0%, #F86F2F 5%, #D43089 45%,#9E37B8 60%,#5F4BC6 90%);
+}
+
+.container-redes-sociales ul li .twitter:hover{
+  background-color: var(--twitter);
+}
+
+.container-redes-sociales ul li .youtube:hover{
+  background-color: var(--youtube);
+}
+
+.container-redes-sociales ul li .tumblr:hover{
+  background-color: var(--tumblr);
+}
+
+.container-redes-sociales ul li .behance:hover{
+  background-color: var(--behance);
+}
+
+.container-redes-sociales ul li .twitch:hover{
+  background-color: var(--twitch);
+}
+
+.container-redes-sociales ul li .cafecito:hover{
+  background-color: var(--cafecito);
+}
+
 
 /*topnav*/
 @media screen and (max-width: 600px) {
@@ -384,9 +455,92 @@ basado en la idea dada por w3 school*/
 @media screen and (max-width: 1023px) {
   .row{
   visibility: hidden;}
-  
-  
 }
+ 
+@media screen and (320px<width<=375px) {
+  .container-redes-sociales ul li{
+    display: inline-block;
+    width: 57px;
+    height: 57px;
+  }
+  .container-redes-sociales ul li a{
+    line-height: 57px;
+  }
+}  
+
+@media screen and (375px<width<=474px) {
+  .container-redes-sociales ul li{
+    display: inline-block;
+    width: 69px;
+    height: 69px;
+    text-align: center;
+  }
+  .container-redes-sociales ul li a{
+    line-height: 69px;
+  }
+}  
+
+@media screen and (578px<width<=705px) {
+  .container-redes-sociales ul li{
+    display: inline-block;
+    width: 103px;
+    height: 103px;
+    text-align: center;
+  }
+  .container-redes-sociales ul li a{
+    line-height: 103px;
+  }
+}  
+
+@media screen and (705px<width<=768px) {
+  .container-redes-sociales ul li{
+    display: inline-block;
+    width: 59px;
+    height: 59px;
+    text-align: center;
+  }
+  .container-redes-sociales ul li a{
+    line-height: 59px;
+  }
+}
+
+@media screen and (768px<width<=891px) {
+  .container-redes-sociales ul li{
+    display: inline-block;
+    width: 69px;
+    height: 69px;
+    text-align: center;
+  }
+  .container-redes-sociales ul li a{
+    line-height: 69px;
+  }
+}
+
+@media screen and (width>1024px) {
+  .container-redes-sociales ul li{
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+  }
+  .container-redes-sociales ul li a{
+    line-height: 120px;
+    font-size: 30px;
+  }
+}
+@media screen and (width>1440px) {
+  .container-redes-sociales ul li{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+  }
+  .container-redes-sociales ul li a{
+    line-height: 200px;
+    font-size: 50px;
+  }
+}
+
 /*animaciones*/
 @keyframes fade {
   from {opacity: .4}
