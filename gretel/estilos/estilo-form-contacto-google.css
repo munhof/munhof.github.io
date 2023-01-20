@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;600;700&family=Solitreo&family=Sono:wght@300;400;500&display=swap');
+body{
+    width: 100%;
+    font-family: 'Sono', sans-serif;
+    background-color: rgb(224, 171, 141);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+#contacto{
+    margin: 20px 0;
+    padding-top: 3vh;
+  }
+  
+  .form{
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 2.2em;
+    border: solid 0.2vh #333;
+    padding: 1vh 2vw;
+    border-radius: 1em;
+    background-color: #fecd72ed;
+    box-shadow: 0 3px 5px rgb(0, 0, 0, 0.3);
+  }
+  
+  .form_group{
+    width: 98%;
+    flex: 100%;
+    position: relative;
+    --color:black;
+    border-radius: 1em;
+    
+  }
+  
+  .form_input{
+    width: 98%;
+    font-family: inherit;
+    font-size: 1rem;
+    color: black;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 0.1vh solid var(--color);
+    background-color: #febd72dc;
+    border-radius: 1em;
+  }
+  
+  .textarea{
+    width: 98%;
+    font-family: inherit;
+    font-size: 1rem;
+    color: black;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 0.1vh solid var(--color);
+    resize: none;
+    overflow: hidden;
+  }
+  
+  .form_label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 8;
+    left: 0.5em;
+    transform: translateY(-28px);
+    transition: transform .5s, color .3s;
+  }
+  
+  .textarea_label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 8;
+    left: 5px;
+    transform: translateY(-2em);
+    transition: transform .5s, color .3s;
+  }
+  
+  .form_input:focus + .form_label, 
+  .form_input:not(:placeholder-shown) + .form_label{
+    transform: translateY(-45px) scale(.9);
+    transform-origin:top left ;
+    --color: #3866f2;
+  }
+  
+  .textarea:focus + .textarea_label, 
+  .textarea:not(:placeholder-shown) + .textarea_label{
+    transform: translateY(-3em) scale(.9);
+    transform-origin:top left ;
+    --color: #3866f2;
+  }
+  
+  
+  .boton{
+    width: 10vw;
+    flex: 20%;
+    float: right;
+    border-radius: 1em;
+    background-color: #febd72dc;
+    border: solid 1px #0c0b0b;
+    box-shadow:1px 1px 2px #0c0b0b;
+  }

@@ -1,0 +1,76 @@
+/*Inicio de animacion para carta presetancio con flex-box y animacion en la imagen, 
+basado en la idea dada por w3 school*/
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;600;700&family=Solitreo&family=Sono:wght@300;400;500&display=swap');
+body{
+    width: 100%;
+    font-family: 'Sono', sans-serif;
+    background-color: rgb(224, 171, 141);
+    margin: 0 auto;
+    text-align: center;
+  }
+.carta-presentacion{
+    width: 90vw;
+    margin: 2.5vh auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Sono', sans-serif;
+  }
+  
+  .imagen-carta-presentacion{
+    margin: 2vw;
+    min-width: 200px;
+    width: 40vh;
+    flex: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .texto-carta-presentacion p{
+    font: 300;
+  }
+  
+  .texto-carta-presentacion h3{
+    font: 400;
+  }
+  
+  .presentacion-imagen-doble {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-profile {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 200px;
+    margin: 2%;
+  }
+  
+  .img-back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .presentacion-imagen-doble:hover .img-back {
+    opacity: 1;
+  }
+  
+  .texto-carta-presentacion{
+    flex: 65%;
+    padding: 10px;
+  }

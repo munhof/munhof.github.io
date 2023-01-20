@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;600;700&family=Solitreo&family=Sono:wght@300;400;500&display=swap');
+body{
+    width: 100%;
+    font-family: 'Sono', sans-serif;
+    background-color: rgb(224, 171, 141);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+:root{
+    --facebook: #3866f2;
+    --twitter: #1DA1F2 ;
+    --instagram: #9E37B8 ;
+    --youtube: #FF0000 ;
+    --tumblr: #34526f  ;
+    --behance: #4a6ccf ;
+    --twitch: #6441a5 ;
+    --cafecito: #8FA2CC;
+  }
+  
+  .container-redes-sociales{
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .container-redes-sociales ul li{
+    display: inline-block;
+    margin: 5px 5px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    
+  }
+  
+  .container-redes-sociales ul li a{
+    display: block;
+    padding: 0 10px;
+    background-color: rgb(218, 170, 80);
+    color: #f2f2f2;
+    line-height: 80px;
+    font-size: 18px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
+    transition: .2s;
+  }
+  
+  .container-redes-sociales ul:hover a{
+    filter: blur(2px);
+  }
+  
+  .container-redes-sociales ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .8);
+    filter: none;
+  }
+  
+  
+  .container-redes-sociales ul li .facebook:hover{
+    background-color: var(--facebook);
+  }
+  
+  .container-redes-sociales ul li .instagram:hover{
+    background: radial-gradient(circle at 30% 107%, #FED372 0%, #F86F2F 5%, #D43089 45%,#9E37B8 60%,#5F4BC6 90%);
+  }
+  
+  .container-redes-sociales ul li .twitter:hover{
+    background-color: var(--twitter);
+  }
+  
+  .container-redes-sociales ul li .youtube:hover{
+    background-color: var(--youtube);
+  }
+  
+  .container-redes-sociales ul li .tumblr:hover{
+    background-color: var(--tumblr);
+  }
+  
+  .container-redes-sociales ul li .behance:hover{
+    background-color: var(--behance);
+  }
+  
+  .container-redes-sociales ul li .twitch:hover{
+    background-color: var(--twitch);
+  }
+  
+  .container-redes-sociales ul li .cafecito:hover{
+    background-color: var(--cafecito);
+  }
+  
+  
+   
+  @media screen and (320px<width<=375px) {
+    .container-redes-sociales ul li{
+      display: inline-block;
+      width: 57px;
+      height: 57px;
+    }
+    .container-redes-sociales ul li a{
+      line-height: 57px;
+    }
+  }  
+  
+  @media screen and (375px<width<=474px) {
+    .container-redes-sociales ul li{
+      display: inline-block;
+      width: 69px;
+      height: 69px;
+      text-align: center;
+    }
+    .container-redes-sociales ul li a{
+      line-height: 69px;
+    }
+  }  
+  
+  @media screen and (578px<width<=705px) {
+    .container-redes-sociales ul li{
+      display: inline-block;
+      width: 103px;
+      height: 103px;
+      text-align: center;
+    }
+    .container-redes-sociales ul li a{
+      line-height: 103px;
+    }
+  }  
+  
+  @media screen and (705px<width<=768px) {
+    .container-redes-sociales ul li{
+      display: inline-block;
+      width: 59px;
+      height: 59px;
+      text-align: center;
+    }
+    .container-redes-sociales ul li a{
+      line-height: 59px;
+    }
+  }
+  
+  @media screen and (768px<width<=891px) {
+    .container-redes-sociales ul li{
+      display: inline-block;
+      width: 69px;
+      height: 69px;
+      text-align: center;
+    }
+    .container-redes-sociales ul li a{
+      line-height: 69px;
+    }
+  }
+  
+  @media screen and (width>1024px) {
+    .container-redes-sociales ul li{
+      display: inline-block;
+      width: 120px;
+      height: 120px;
+      text-align: center;
+    }
+    .container-redes-sociales ul li a{
+      line-height: 120px;
+      font-size: 30px;
+    }
+  }
+  @media screen and (width>1440px) {
+    .container-redes-sociales ul li{
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+    }
+    .container-redes-sociales ul li a{
+      line-height: 200px;
+      font-size: 50px;
+    }
+  }

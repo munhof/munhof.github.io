@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;600;700&family=Solitreo&family=Sono:wght@300;400;500&display=swap');
+body{
+    width: 100%;
+    font-family: 'Sono', sans-serif;
+    background-color: rgb(224, 171, 141);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+.footer{
+    width: 100%;
+    background-color: bisque;
+  }
+  
+  .footer-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .footer-logo{
+    min-width: 250px;
+    max-width: 300px;
+    width: 30vw;
+    flex:60%;
+    filter: grayscale(100%);
+  
+  }
+  
+  .footer-logo:hover{
+    filter: grayscale(0%)
+  }
+  
+  .footer-menu{
+    min-width: 400px;
+    flex: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-menu ul{
+    padding: 2px;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .footer-menu ul li{
+    display: inline-block;
+    margin: 5px 5px;
+    padding: 10px;
+  }
+  
+  .footer-menu ul li a{
+      float: left;
+      color: #0c0b0b;
+      padding: 2vh 3vh;
+      text-decoration: none;
+      font-size: 1.4em;
+      font-family: 'Edu NSW ACT Foundation', cursive;
+      font: 700;
+      
+    }
+    
+  .footer-menu ul li a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  
+  .footer-copyright{
+    text-align: center;
+    font-size: 18px;
+  }

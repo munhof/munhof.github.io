@@ -114,7 +114,7 @@ basado en la idea dada por w3 school*/
 
 .imagen-carta-presentacion{
   margin: 2vw;
-  min-width: 250px;
+  min-width: 200px;
   width: 40vh;
   flex: 5vh;
   display: flex;
@@ -124,10 +124,12 @@ basado en la idea dada por w3 school*/
 
 .texto-carta-presentacion p{
   font: 300;
+  font-size: medium;
 }
 
 .texto-carta-presentacion h3{
   font: 400;
+  font-size: larger;
 }
 
 .presentacion-imagen-doble {
@@ -142,7 +144,8 @@ basado en la idea dada por w3 school*/
   display: block;
   width: 100%;
   height: auto;
-
+  min-width: 200px;
+  margin: 3%;
 }
 
 .img-back {
@@ -186,7 +189,7 @@ basado en la idea dada por w3 school*/
 
 .mySlides img{
   width: 30vw;
-  min-width: 300px;
+  min-width: 250px;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -213,7 +216,14 @@ basado en la idea dada por w3 school*/
 
 /* Position the "next button" to the right */
 .next {
+  top: 6.5vh;;
   right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  top: 6.5vh;;
+  left: 0;
   border-radius: 3px 0 0 3px;
 }
 
@@ -238,6 +248,7 @@ basado en la idea dada por w3 school*/
   background-color: #222;
   padding: 0.8em 1em;
   color: white;
+  position: relative;
 }
 
 .row:after {
@@ -336,7 +347,7 @@ basado en la idea dada por w3 school*/
   position: absolute;
   top: 8;
   left: 0.5em;
-  transform: translateY(-28px);
+  transform: translateY(-1.5em);
   transition: transform .5s, color .3s;
 }
 
@@ -346,7 +357,7 @@ basado en la idea dada por w3 school*/
   position: absolute;
   top: 8;
   left: 5px;
-  transform: translateY(-2em);
+  transform: translateY(-1.5em);
   transition: transform .5s, color .3s;
 }
 
@@ -373,6 +384,7 @@ basado en la idea dada por w3 school*/
   background-color: #febd72dc;
   border: solid 1px #0c0b0b;
   box-shadow:1px 1px 2px #0c0b0b;
+  font-size: 1em;
 }
 
 .otros-trabajos{
@@ -651,6 +663,34 @@ basado en la idea dada por w3 school*/
   .container-redes-sociales ul li a{
     line-height: 200px;
     font-size: 50px;
+  }
+}
+
+@media screen and (width>1440px) {
+  p,label,.boton{
+    font-size: x-large;
+  }
+
+  h1{
+    font-size: 6em;
+  }
+
+  h2{
+    font-size: 4em;
+  }
+
+  h3{
+    font-size: 3em;
+  }
+}
+
+@media screen and (width>2440px) {
+  p{
+    font-size: xx-large;
+  }
+  
+  h3{
+    font-size: 5em;
   }
 }
 
