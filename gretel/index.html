@@ -12,10 +12,10 @@
 <body>
     <header>
         <div class="topnav" id="myTopnav">
-            <a href="#home" class="active">Home</a>
-            <a href="#news" class="item">News</a>
-            <a href="#contact" class="item">Contact</a>
-            <a href="#about" class="item">About</a>
+            <a href="#" class="logo">UN-LOGO</a>
+            <a href="#sobre-mi" class="item">Sobre Mí</a>
+            <a href="#proyectos" class="item">Proyectos</a>
+            <a href="#contacto" class="item">Contacto</a>
             <a href="javascript:void(0);" class="icon" onclick="navbutton()">
               <i class="fa fa-bars"></i>
             </a>
@@ -28,9 +28,9 @@
         <div class="carta-presentacion lapiz-fino">
             <div class="imagen-carta-presentacion">
                 <div class="presentacion-imagen-doble">
-                    <img class="image-profile" src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt="Avatar">
+                        <img class="image-profile" src="imagenes/foto-perfil-real.png"  alt="foto-de-perfil"/>
                     <div class="img-back">
-                        <img class="image-profile" src="https://images.unsplash.com/photo-1570824104629-1817c91f7d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" />    
+                        <img class="image-profile" src="imagenes/foto-perfil-avatar.png" alt="Avatar"> 
                     </div>
                   </div>
             </div>
@@ -38,178 +38,161 @@
                 <h3>UN TITULO</h3>
                 <p id="presentacion">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget elementum quam. Nam commodo turpis massa, a suscipit diam ullamcorper vitae. Quisque enim erat, laoreet non molestie posuere, tristique a justo. Vivamus id cursus justo. Integer blandit mauris urna. Morbi nulla ipsum, pulvinar nec massa id, egestas laoreet turpis. Aenean sed metus vel ligula tincidunt laoreet. Nullam elementum tortor et risus molestie, in commodo lectus gravida. Phasellus venenatis sem vel elit facilisis tristique. Suspendisse ullamcorper mattis enim, eget rhoncus tellus fermentum et. Quisque dignissim lacus ac augue euismod, id pellentesque felis maximus. Suspendisse bibendum rutrum est eu faucibus. Sed volutpat id leo eu mollis. Nam ut placerat nisi.
-
-                    In viverra volutpat arcu ac pharetra. In quis lobortis diam, vitae viverra metus. Ut a consequat nibh. Curabitur condimentum nisi vitae ante dapibus, ut auctor lorem pellentesque. Quisque ornare imperdiet arcu, eu accumsan neque porta id. Maecenas molestie finibus dui eget mattis. Aliquam et felis tincidunt, pharetra nisi tempor, tempus tellus. Suspendisse augue sem, dapibus a venenatis vitae, consequat sit amet mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris semper sem sit amet pharetra pretium. Sed erat purus, laoreet sed nibh aliquet, ultricies varius lacus. Ut ac ultricies dui.
                 </p>
             </div>
         </div>
 
     </section>
 
-    <section id="seccion2">
+    
 
-        <h2>Mis Trabajos<h2>
+    <section id="proyectos">
+        <h2>Mis Trabajos</h2>
+    <!-- Container for the image gallery -->
+        <div class="container">
 
-<!-- Container for the image gallery -->
-    <div class="container">
+        <!-- Full-width images with number text -->
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                    <img  src="imagenes/cueva.png" style="height:100%" alt="The Woods">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                    <img  src="imagenes/montaña 1.png" style="height:100%" alt="Cinque Terre"> 
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                    <img  src="imagenes/montaña 2.png" style="height:100%" alt="Mountains and fjor">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img  src="imagenes/rio.png" style="height:100%" alt="Northern Lights">
+        
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img  src="imagenes/sierras.png" style="height:100%" alt="Nature and sunrise">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                    <img  src="imagenes/valle.png" style="height:100%" alt="Snowy Mountains">
+            </div>
+        
+        <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        <!-- Image text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        
+        <!-- Thumbnail images -->
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="imagenes/cueva.png" style="height: 20vh" onclick="currentSlide(1)" alt="The Woods">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="imagenes/montaña 1.png" style="height: 20vh" onclick="currentSlide(2)" alt="Cinque Terre">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="imagenes/montaña 2.png" style="height: 20vh" onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="imagenes/rio.png" style="height: 20vh" onclick="currentSlide(4)" alt="Northern Lights">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="imagenes/sierras.png" style="height: 20vh" onclick="currentSlide(5)" alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="imagenes/valle.png" style="height: 20vh" onclick="currentSlide(6)" alt="Snowy Mountains">
+                </div>
+            </div>
+        </div>    
 
-    <!-- Full-width images with number text -->
-        <div class="mySlides">
-            <div class="numbertext">1 / 6</div>
-                <img src="img_woods_wide.jpg" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <div class="numbertext">2 / 6</div>
-                <img src="img_5terre_wide.jpg" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <div class="numbertext">3 / 6</div>
-            <img src="img_mountains_wide.jpg" style="width:100%">
-        </div>
-    
-        <div class="mySlides">
-            <div class="numbertext">4 / 6</div>
-            <img src="img_lights_wide.jpg" style="width:100%">
-        </div>
-    
-        <div class="mySlides">
-            <div class="numbertext">5 / 6</div>
-            <img src="img_nature_wide.jpg" style="width:100%">
-        </div>
-    
-        <div class="mySlides">
-            <div class="numbertext">6 / 6</div>
-            <img src="img_snow_wide.jpg" style="width:100%">
-        </div>
-    
-    <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    
-    <!-- Image text -->
-        <div class="caption-container">
-            <p id="caption"></p>
-        </div>
-    
-    <!-- Thumbnail images -->
-        <div class="row">
-            <div class="column">
-                <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-            </div>
-        </div>
-    </div>
-
-
-    <h3>Otros trabajos</h3>
+        <h4>Otros Proyectos</h4>
 
         <div class="galery">
             <div class="box-img vineta">
-                <a href="#">
                     <figure>
                         <img src="https://images.unsplash.com/photo-1570824104629-1817c91f7d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="img-galeria">
                     </figure>
-                </a>
             </div>
             <div class="box-img vineta">
-                <a href="#">
                     <figure>
                         <img src="https://images.unsplash.com/photo-1570824104629-1817c91f7d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="img-galeria">
                     </figure>
-                </a>
             </div>
             <div class="box-img vineta">
-                <a href="#">
                     <figure>
                         <img src="https://images.unsplash.com/photo-1570824104629-1817c91f7d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="img-galeria">
                     </figure>
-                </a>
             </div>
             <div class="box-img vineta">
-                <a href="#">
                     <figure>
                         <img src="https://images.unsplash.com/photo-1570824104629-1817c91f7d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="img-galeria">
                     </figure>
-                </a>
             </div>
             <div class="box-img vineta">
-                <a href="#">
                     <figure>
                         <img src="https://images.unsplash.com/photo-1570824104629-1817c91f7d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="img-galeria">
                     </figure>
-                </a>
             </div>
             <div class="box-img vineta">
-                <a href="#">
                     <figure>
                         <img src="https://images.unsplash.com/photo-1570824104629-1817c91f7d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="img-galeria">
                     </figure>
-                </a>
             </div>
             <div class="box-img vineta">
-                <a href="#">
                     <figure>
                         <img src="https://images.unsplash.com/photo-1570824104629-1817c91f7d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="img-galeria">
                     </figure>
-                </a>
             </div>
         </div>
 
     </section>
-    
-    <section id="seccion3">
-        <h2>Contacto</h2>
-        <p>
-            si deseas contactarme puede enviarme un mensaje a traves de este formulario de contacto o a traves de mis redes sociales.
-        </p>
-
-        <form>
-            <div class="form">
-                            <div class="form_group">
-                                <input type="email" class="form_input" placeholder=" " name="mail" id="mail">
-                                <label class="form_label" for="email">Email:</label>
-                            </div>
-                            <div class="form_group">
-                                <input type="text" class="form_input" placeholder=" " name="asunto" id="asunto">
-                                <label class="form_label" for="asunto">Asunto:</label>
-                            </div>
-                            <div class="form_group">
-                                <textarea class="form_input textarea" id="textarea_form" placeholder=" " name="cuerpo" id="cuerpo" style="height: 1em;"></textarea>
-                                <label class="textarea_label" id="textarea_label" for="cuerpo" >Cuerpo:</label>
-                            </div>
-                            <input class="boton" type="submit" value="Submit">
-                </div>
-            </div>
-        </form>
         
-        <h4> Si deseas apoyarme y seguir mis nuevos proyectos visita mis redes sociales</h4>
+    <section id="contacto">
+            <h2>Contacto</h2>
+            <p>
+                si deseas contactarme puede enviarme un mensaje a traves de este formulario de contacto o a traves de mis redes sociales.
+            </p>
 
-        <div class="container-redes-sociales">
-            <ul>
-                <li><a href="" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="" class="instagram"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="" class="twitter"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="" class="youtube"><i class="fab fa-youtube"></i></a></li>
-                <li><a href="" class="tumblr"><i class="fa-brands fa-tumblr"></i></a></li>
-                <li><a href="" class="behance"><i class="fa-brands fa-behance"></i></a></li>
-                <li><a href="" class="twitch"><i class="fa-brands fa-twitch"></i></a></li>
-                <li><a href="" class="cafecito"><i class="fa-solid fa-mug-saucer"></i></a></li>
-            </ul>
-        </div>
+            <form>
+                <div class="form">
+                    <div class="form_group">
+                        <input type="email" class="form_input" placeholder=" " name="mail" id="mail">
+                        <label class="form_label" for="email">Email:</label>
+                    </div>
+                    <div class="form_group">
+                        <input type="text" class="form_input" placeholder=" " name="asunto" id="asunto">
+                        <label class="form_label" for="asunto">Asunto:</label>
+                    </div>
+                    <div class="form_group">
+                        <textarea class="form_input textarea" id="textarea_form" placeholder=" " name="cuerpo" id="cuerpo" style="height: 1em;"></textarea>
+                        <label class="textarea_label" id="textarea_label" for="cuerpo" >Cuerpo:</label>
+                    </div>
+                    <input class="boton" type="submit" value="Submit">
+                </div>
+            </form>
+            
+            <h4> Si deseas apoyarme y seguir mis nuevos proyectos visita mis redes sociales</h4>
+
+            <div class="container-redes-sociales">
+                <ul>
+                    <li><a href="" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="" class="tumblr"><i class="fa-brands fa-tumblr"></i></a></li>
+                    <li><a href="" class="behance"><i class="fa-brands fa-behance"></i></a></li>
+                    <li><a href="" class="twitch"><i class="fa-brands fa-twitch"></i></a></li>
+                    <li><a href="" class="cafecito"><i class="fa-solid fa-mug-saucer"></i></a></li>
+                </ul>
+            </div>
     </section>
 
     <footer class="footer">
@@ -218,9 +201,9 @@
             <div class="footer-menu">
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </div>
@@ -231,8 +214,9 @@
         </div>
     </footer>
 
-<script src="scrips\scrip-top-nav.js"></script>
-<script src="scrips\scrip-carrusel.js"></script>
-<script src="scrips\scrip-textarea-autoajustable.js"></script>
+
+    <script src="scrips\scrip-top-nav.js"></script>
+    <script src="scrips\scrip-carrusel.js"></script>
+    <script src="scrips\scrip-textarea-autoajustable.js"></script>
 </body>
 </html>
