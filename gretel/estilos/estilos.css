@@ -4,6 +4,7 @@ body{
   font-family: 'Sono', sans-serif;
   background-color: rgb(224, 171, 141);
   margin: 0 auto;
+  text-align: center;
 }
 
 h1{
@@ -173,8 +174,7 @@ basado en la idea dada por w3 school*/
 /* Position the image container (needed to position the left and right arrows) */
 .container {
   position: relative;
-  margin: 0 auto;
-  padding-bottom: 3vh;
+  margin:0 auto;
   width: 95%;
 }
 
@@ -182,6 +182,11 @@ basado en la idea dada por w3 school*/
 .mySlides {
   display: none;
   text-align: center;
+}
+
+.mySlides img{
+  width: 30vw;
+  min-width: 300px;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -242,15 +247,22 @@ basado en la idea dada por w3 school*/
 }
 
 /* Six columns side by side */
+.row{
+  text-align: center;
+  display: flex;
+}
 .column {
   float: left;
-  width: 15.66vw;
-  text-align: center;
+  margin: 0 auto;
 }
-
+.column img{
+  margin: 0 1vw;
+  width: 13vw;
+}
 /* Add a transparency effect for thumnbail images */
 .demo {
   opacity: 0.6;
+  max-height:300px ;
 }
 
 .active,
@@ -259,37 +271,6 @@ basado en la idea dada por w3 school*/
 }
 /*fin estilo carrusel*/
 
-/*Galeria, idea del codigo: https://www.youtube.com/watch?v=l2VllYk56lM*/
-
-.galery{
-  width: 98%;
-  max-width: 1600px;
-  display: grid;
-  margin:0 auto;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2%;
-  padding-top: 3vh;
-  padding-bottom: 3vh;
-}
-
-
-.galery .box-img figure{
-  width: 100%;
-  height: 100%;
-  box-shadow: 
-    0 0 0 0.1vh black,
-    0 0 0 0.6vh rgb(224, 171, 141),
-    0 0 0 0.8vh black;
-  }
-
-.galery .box-img img{
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-}
-
-
-/*fin galeria*/
 
 /*estilos forms google*/
 
@@ -307,13 +288,20 @@ basado en la idea dada por w3 school*/
   align-items: center;
   margin: 0 auto;
   margin-bottom: 2.2em;
+  border: solid 0.2vh #333;
+  padding: 1vh 2vw;
+  border-radius: 1em;
+  background-color: #fecd72ed;
+  box-shadow: 0 3px 5px rgb(0, 0, 0, 0.3);
 }
 
 .form_group{
-  width: 80vw;
+  width: 98%;
   flex: 100%;
   position: relative;
   --color:black;
+  border-radius: 1em;
+  
 }
 
 .form_input{
@@ -325,6 +313,8 @@ basado en la idea dada por w3 school*/
   border: none;
   outline: none;
   border-bottom: 0.1vh solid var(--color);
+  background-color: #febd72dc;
+  border-radius: 1em;
 }
 
 .textarea{
@@ -379,6 +369,10 @@ basado en la idea dada por w3 school*/
   width: 10vw;
   flex: 20%;
   float: right;
+  border-radius: 1em;
+  background-color: #febd72dc;
+  border: solid 1px #0c0b0b;
+  box-shadow:1px 1px 2px #0c0b0b;
 }
 
 .otros-trabajos{
@@ -408,7 +402,7 @@ basado en la idea dada por w3 school*/
 .container-redes-sociales ul li a{
   display: block;
   padding: 0 10px;
-  background-color: #333;
+  background-color: rgb(218, 170, 80);
   color: #f2f2f2;
   line-height: 80px;
   font-size: 18px;
@@ -507,9 +501,20 @@ basado en la idea dada por w3 school*/
 }
 
 .footer-menu ul li a{
-  display: block;
-  font-size: 1.5em;
-}
+    float: left;
+    color: #0c0b0b;
+    padding: 2vh 3vh;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font: 700;
+    
+  }
+  
+.footer-menu ul li a:hover {
+    background-color: #ddd;
+    color: black;
+  }
 
 .footer-copyright{
   text-align: center;
@@ -562,7 +567,7 @@ basado en la idea dada por w3 school*/
 /*carrusel*/
 @media screen and (max-width: 1023px) {
   .row{
-  visibility: hidden;}
+  display: none;}
 }
  
 @media screen and (320px<width<=375px) {
