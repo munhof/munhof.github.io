@@ -126,18 +126,21 @@
             <form>
                 <div class="form">
                     <div class="form_group">
-                        <input type="email" class="form_input" placeholder=" " name="mail" id="mail">
-                        <label class="form_label" for="email">Email:</label>
+                        <input type="email" class="form_input" placeholder=" " name="mail" id="mail" required="requiered">
+                        <label class="form_label" for="email">Email*:</label>
                     </div>
                     <div class="form_group">
-                        <input type="text" class="form_input" placeholder=" " name="asunto" id="asunto">
-                        <label class="form_label" for="asunto">Asunto:</label>
+                        <input type="text" class="form_input" placeholder=" " name="asunto" id="asunto" required="requiered">
+                        <label class="form_label" for="asunto">Asunto*:</label>
                     </div>
                     <div class="form_group">
-                        <textarea class="form_input textarea" id="textarea_form" placeholder=" " name="cuerpo" id="cuerpo" style="height: 1em;"></textarea>
-                        <label class="textarea_label" id="textarea_label" for="cuerpo" >Cuerpo:</label>
+                        <textarea class="form_input textarea" id="textarea_form" placeholder=" " name="cuerpo" id="cuerpo" style="height: 1em;" required="requiered"></textarea>
+                        <label class="textarea_label" id="textarea_label" for="cuerpo" >Cuerpo*:</label>
                     </div>
-                    <input class="boton" type="submit" value="Submit">
+                    <div class="form_group">
+                        <input class="boton" type="submit" value="Submit"><br>
+                    </div>
+                    <small>* Estos elemenos son requeridos para enviar el formulario</small>
                 </div>
             </form>
             
