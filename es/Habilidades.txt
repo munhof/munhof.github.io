@@ -1,0 +1,4 @@
+Cuento con conocimientos y habilidades de desarrollo de soluciones numericas y analisis de datos con python, así como tambien una intrudccion para el manejo de bases de datos.
+Tambien tengo conocimientos en el desarrollo web utilizando las tecnollogias HTML,CSS y JS.
+Tengo conocimientos en progrmacion en PLCs de la marca Schneider y Simens, como tambien manejo de software de diseño y modelado 2D y 3D.
+                                

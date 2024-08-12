@@ -1,0 +1,4 @@
+Soy un estudiante de la carrea de <a href="https://exactas.uba.ar/ensenanza/carreras-de-grado/ciencias-de-datos/">Ciencias de datos</a> en la UBA.
+Tengo mucho interes en las tecnologias del desarrollo de software, las matematicas y la divugacion de la ciencia.
+De la union de todo esto nacio <b>MunhoF</b>, un conjunto de proyectos que buscan dar una salida profesional a mis pasiones y acercar los conocimientos al público general.
+                            
