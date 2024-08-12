@@ -1,0 +1,4 @@
+Como parte de mi eduacion Universitaria cuento con una amplia formacion en Matematicas. Ademas en realice el curso de desarrollo de soluciones para problemas numericos en python <a href="https://exactasprograma.exactas.uba.ar">Exactas Progrma</a>.
+Actualmente me encuentro en el proceso de terminar el curso de front-end del progrma <a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa">Argentina Progrma 4.0</a>
+Ademas cuento con conomientos del desarrollo y progamacion en sistemas de PLC y de logica analogica.
+                            
