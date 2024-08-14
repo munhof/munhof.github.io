@@ -1,4 +1,9 @@
+<?php
+    include "configuracion.php"
+    
+?>
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +16,6 @@
 </head>
 
 <body>
-    <?php include 'cargar_contenido.php'; ?>
     <header class="fixed-top">
     <nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -21,9 +25,12 @@
         </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#quien_soy">¿Quien soy?</a>
-                    <a class="nav-link active" href="#proyectos">Proyectos</a>
-                    <a class="nav-link active" href="#contactame">Contactame</a>
+                    <a class="nav-link active" aria-current="page" href="#quien_soy"><?php echo $lang['Quien soy'] ?></a>
+                    <a class="nav-link active" href="#proyectos"><?php echo $lang["Proyectos"] ?></a>
+                    <a class="nav-link active" href="#contactame"><?php echo $lang["Contacto"] ?></a>
+                    <a class="nav-link" href="index.php?lang=es"><?php echo $lang['es'] ?></a>
+                    <a class="nav-link" href="index.php?lang=en"><?php echo $lang['en'] ?></a>
+                    <a class="nav-link" href="index.php?lang=po"><?php echo $lang['po'] ?></a>
                 </div>
             </div>
         </div>
@@ -39,7 +46,7 @@
     <section id="quien_soy" class="seccion">
 
     <div id="titulo_quien_soy" class="container-fluid container-fluid-lg titulo-seccion" >
-        <h2 class="text-center">¿Quien soy?</h2>         
+        <h2 class="text-center"><?php echo $lang['Quien soy']?></h2>
     </div>
 
     <div class="container">
@@ -47,9 +54,9 @@
             <div class="col-md-6 col-lg-4 ">
                 <div class="card text-white bg-dark back_light carta-presentacion" id="carta-presentacion">
                     <div class="card-body">
-                        <h3 class="card-title text-center">¿Quien soy?</h3>
+                        <h3 class="card-title text-center"><?php echo $lang['Quien soy']?></h3>
                         <p class="card-text">
-                            <span>Texto de card-text: Quien soy</span>
+                            <span><?php echo $lang['Texto quien soy']?></span>
                         </p>
                     </div> 
                 </div>
@@ -57,9 +64,9 @@
             <div class="col-md-6 col-lg-4">
             <div class="card text-white bg-dark back_light carta-presentacion" id="carta-presentacion">
                     <div class="card-body">
-                        <h3 class="card-title text-center">Mi formación</h3>
+                        <h3 class="card-title text-center"><?php echo $lang['Formacion']?></h3>
                         <p class="card-text">
-                            <span>Texto Mi Formacion </span>
+                            <span><?php echo $lang['Texto Formacion']?> </span>
                         </p>
                     </div>
             </div>
@@ -67,9 +74,9 @@
             <div class="col-md-12 col-lg-4">
                 <div class="card text-white bg-dark back_light carta-presentacion">
                     <div class="card-body text-center"> 
-                        <h3>Habilidades</h3>
+                        <h3><?php echo $lang['Habilidades']?></h3>
                             <p>
-                                <span>Texto Habilidades</span>
+                                <span><?php echo $lang['Texto Habilidades']?></span>
                             </p>
                             
                         
@@ -86,9 +93,9 @@
     <section id="proyectos" class="seccion">
 
     <div id="titulo_quien_soy" class="container-fluid container-fluid-lg" >
-        <h2 class="text-center">Proyectos</h2>         
+        <h2 class="text-center"><?php echo $lang['Proyectos']?></h2>
     </div>
-    <h5 class="text-center"> Texto Proyextos
+    <h5 class="text-center"> <?php echo $lang['Texto Proyectos']?>
     </h5>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
@@ -114,7 +121,7 @@
       </div>
 
     <div id="titulo_quien_soy" class="container-fluid container-fluid-lg" >
-        <h2 class="text-center">Otros proyectos</h2>         
+        <h2 class="text-center"><?php echo $lang['Otros proyectos']?></h2>
     </div>
 
     <div id="otros proyectos" class="container-fluid container-fluid-lg" >
@@ -132,11 +139,11 @@
     <section id="contactame" class="container">
 
     <h2  class="text-center" id="titulo-contactame">
-        Contactame
+        <?php echo $lang['Contacto']?>
     </h2>
 
     <p  class="text-center" id="texto-contactame">
-        Si deseas contacarme para realizar algún proyecto o duda puedes hacerlo enviando un mensaje mediante este formulario
+        <?php echo $lang['Texto Contactame']?>
     </p>
     
     <form action="send_email.php" method="POST" id="formulario-contacto">
@@ -144,28 +151,28 @@
             <div class="col-1"></div>
             <label for="inputEmail3" class="col-sm-1 col-form-label">Email</label>
             <div class="col col-md-8">
-                <input type="email" placeholder="ejemplo@mail.com" class="form-control" id="inputEmail3" name="email">
+                <input type="email" placeholder="juan@mail.com" class="form-control" id="inputEmail3" name="email">
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-1"></div>
             <label for="inputAsunto3" class="col-sm-1 col-form-label">Asunto</label>
             <div class="col col-md-8">
-                <input type="asunto" placeholder="Asunto" class="form-control" id="inputPassword3" name="Asunto">
+                <input type="asunto" placeholder=<?php echo $lang['Asunto']?> class="form-control" id="inputPassword3" name="Asunto">
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-1"></div>
-            <label for="colFormLabel" class="col-sm-1 col-form-label">Cuerpo</label>
+            <label for="colFormLabel" class="col-sm-1 col-form-label"><?php echo $lang['Cuerpo']?></label>
             <div class="col col-md-8">
-                <textarea class="form-control" placeholder="Cuerpo" id="floatingTextarea2" style="height: 100px" name="Cuerpo"></textarea>
+                <textarea class="form-control" placeholder="<?php echo $lang['Cuerpo']?>" id="floatingTextarea2" style="height: 100px" name="Cuerpo"></textarea>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-1"></div>
             <label for="colFormLabel" class="col-sm-1 col-form-label"></label>
             <div class="col col-md-8 d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="submit" class="btn btn-primary me-md-2"> <a href="#contactame" name="buton"></a>Enviar</button>
+                <button type="submit" class="btn btn-primary me-md-2"> <a href="#contactame" name="buton"><?php echo $lang['Enviar']?></button>
             </div>
         </div>
     </form>
@@ -207,7 +214,7 @@
       <!-- Section: Text -->
       <section class="mb-4">
         <p>
-          Para conocer mas sobre mis proyectos en desarrollo o tener informacion profesional detallada, sigueme en mis diferentes redes sociales y seamos amigos del internet.
+            <?php echo $lang['Texto redes sociales']?>
         </p>
       </section>
       <!-- Section: Text -->
@@ -216,13 +223,13 @@
       <section class="">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#quien_soy">¿Quien soy?</a>
+                <a class="nav-link active" aria-current="page" href="#quien_soy"><?php echo $lang['Quien soy']?></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#proyectos">Proyectos</a>
+                <a class="nav-link active" href="#proyectos"><?php echo $lang['Proyectos']?></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#contactame">Contactame</a>
+                <a class="nav-link active" href="#contactame"><?php echo $lang['Contacto']?></a>
             </li>
         </ul>    
       </section>
