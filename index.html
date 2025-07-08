@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facundo Nicolás Munhó Vital - Portfolio</title>
+    <title data-i18n="pageTitle">Facundo Nicolás Munhó Vital - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -11,22 +10,31 @@
     <header>
         <div class="container">
             <h1>Facundo Nicolás Munhó Vital</h1>
+<<<<<<< HEAD
             <p>Estudiante de Ciencias de Datos | Entusiasta de la Visión Computacional y Análisis de Señales</p>
+=======
+            <p data-i18n="subtitle">Estudiante de Ciencias de Datos | Entusiasta de la Visión Computacional y Análisis de Señales</p>
+>>>>>>> 678daa2 (v2.1.1)
             <nav>
                 <ul>
-                    <li><a href="#about">Sobre Mí</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#experience">Experiencia</a></li>
-                    <li><a href="#education">Educación</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#about" data-i18n="navAbout">Sobre Mí</a></li>
+                    <li><a href="#skills" data-i18n="navSkills">Habilidades</a></li>
+                    <li><a href="#experience" data-i18n="navExperience">Experiencia</a></li>
+                    <li><a href="#education" data-i18n="navEducation">Educación</a></li>
+                    <li><a href="#projects" data-i18n="navProjects">Proyectos</a></li>
+                    <li><a href="#contact" data-i18n="navContact">Contacto</a></li>
                 </ul>
             </nav>
+            <div class="language-switcher">
+                <button data-lang="es">ES</button>
+                <button data-lang="en">EN</button>
+            </div>
         </div>
     </header>
 
     <main class="container">
         <section id="about" class="section">
+<<<<<<< HEAD
             <h2>Sobre Mí</h2>
             <p>Soy un estudiante de la carrera de Licenciatura en Ciencias de Datos, con un bachiller en Ciencias de Datos (título en trámite universitario) y técnico electromecánico. Me apasionan los problemas numéricos, la visión computacional y el análisis de señales.</p>
             <p>Cuento con una curiosidad constante y busco continuamente el aprendizaje y la capacitación para afrontar nuevos y más audaces retos.</p>
@@ -108,23 +116,45 @@
             </div>
         </section>
 
-        <section id="contact" class="section">
-            <h2>Contacto</h2>
-            <p>Puedes contactarme a través de:</p>
+=======
+            <h2 data-i18n="aboutTitle">Sobre Mí</h2>
+            <p data-i18n="aboutP1">Soy un estudiante de la carrera de Licenciatura en Ciencias de Datos, con un bachiller en Ciencias de Datos (título en trámite universitario) y técnico electromecánico. Me apasionan los problemas numéricos, la visión computacional y el análisis de señales.</p>
+            <p data-i18n="aboutP2">Cuento con una curiosidad constante y busco continuamente el aprendizaje y la capacitación para afrontar nuevos y más audaces retos.</p>
+            <h3 data-i18n="languagesTitle">Idiomas</h3>
             <ul>
+                <li data-i18n="langSpanish">Español: Lengua Nativa</li>
+                <li data-i18n="langPortuguese">Portugués: Intermedio</li>
+                <li data-i18n="langEnglish">Inglés: Intermedio (técnico)</li>
+                <li data-i18n="langGerman">Alemán: Básico</li>
+            </ul>
+        </section>
+>>>>>>> 678daa2 (v2.1.1)
+        <section id="contact" class="section">
+            <h2 data-i18n="contactTitle">Contacto</h2>
+            <p data-i18n="contactText">Puedes contactarme a través de:</p>
+            <ul>
+<<<<<<< HEAD
                 <li>Teléfono: +549 1163765821</li>
                 <li>LinkedIn: <a href="https://www.linkedin.com/in/facundomunho/" target="_blank">linkedin.com/in/facundomunho/</a></li>
             </ul>
         </section>
 
         </main>
+=======
+                <li data-i18n="contactPhone">Teléfono: +549 1163765821</li>
+                <li data-i18n="contactLinkedIn">LinkedIn: <a href="https://www.linkedin.com/in/facundomunho/" target="_blank">linkedin.com/in/facundomunho/</a></li>
+            </ul>
+        </section>
+    </main>
+>>>>>>> 678daa2 (v2.1.1)
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Facundo Nicolás Munhó Vital. Todos los derechos reservados.</p>
+            <p data-i18n="footerCopyright">&copy; 2025 Facundo Nicolás Munhó Vital. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <script src="translations.js"></script> 
     <script src="script.js"></script>
 </body>
 </html>

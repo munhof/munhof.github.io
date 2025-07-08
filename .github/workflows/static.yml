@@ -36,7 +36,11 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
+<<<<<<< HEAD
         uses: actions/upload-pages-artifact@v3 # <-- Changed from v4 to v3
+=======
+        uses: actions/upload-pages-artifact@v4  # ← ✅ ¡CAMBIO AQUÍ!
+>>>>>>> 678daa2 (v2.1.1)
         with:
           path: '.'
 

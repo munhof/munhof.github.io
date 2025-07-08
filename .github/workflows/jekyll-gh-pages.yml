@@ -32,7 +32,11 @@ jobs:
           destination: ./_site
 
       - name: Upload artifact
+<<<<<<< HEAD
         uses: actions/upload-pages-artifact@v3 # <-- Changed from v4 to v3
+=======
+        uses: actions/upload-pages-artifact@v4  # ← cambio clave
+>>>>>>> 678daa2 (v2.1.1)
 
   deploy:
     environment:
