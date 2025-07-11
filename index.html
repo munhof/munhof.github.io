@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="es"> <head>
+<html lang="es">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="pageTitle">Facundo Nicolás Munhó Vital - Portfolio</title>
@@ -8,23 +9,23 @@
 </head>
 <body>
     <header>
-    <div class="container">
-        <h1>Facundo Nicolás Munhó Vital</h1>
-        <p data-i18n="subtitle">Estudiante de Ciencias de Datos | Entusiasta de la Visión Computacional y Análisis de Señales</p>
-        <nav>
-            <ul>
-                <li><a href="#about" data-i18n="navAbout">Sobre Mí</a></li>
-                <li><a href="#skills" data-i18n="navSkills">Habilidades</a></li>
-                <li><a href="#experience" data-i18n="navExperience">Experiencia</a></li>
-                <li><a href="#education" data-i18n="navEducation">Educación</a></li>
-                <li><a href="#projects" data-i18n="navProjects">Proyectos</a></li>
-                <li><a href="#contact" data-i18n="navContact">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="language-switcher">
-            <button data-lang="es">ES</button>
-            <button data-lang="en">EN</button>
-        </div>
+        <div class="container">
+            <h1>Facundo Nicolás Munhó Vital</h1>
+            <p data-i18n="subtitle">Estudiante de Ciencias de Datos | Entusiasta de la Visión Computacional y Análisis de Señales</p>
+            <nav>
+                <ul>
+                    <li><a href="#about" data-i18n="navAbout">Sobre Mí</a></li>
+                    <li><a href="#skills" data-i18n="navSkills">Habilidades</a></li>
+                    <li><a href="#experience" data-i18n="navExperience">Experiencia</a></li>
+                    <li><a href="#education" data-i18n="navEducation">Educación</a></li>
+                    <li><a href="#projects" data-i18n="navProjects">Proyectos</a></li>
+                    <li><a href="#contact" data-i18n="navContact">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <button data-lang="es">ES</button>
+                <button data-lang="en">EN</button>
+            </div>
         </div>
     </header>
 
@@ -41,6 +42,76 @@
                 <li data-i18n="langGerman">Alemán: Básico</li>
             </ul>
         </section>
+
+        <section id="skills" class="section">
+            <h2 data-i18n="skillsTitle">Habilidades</h2>
+            <h3 data-i18n="programmingLanguagesTitle">Lenguajes de Programación</h3>
+            <p>Python, Java, C++, Kotlin, R, Dart</p>
+            <h3 data-i18n="toolsAndLibrariesTitle">Herramientas y Librerías</h3>
+            <p data-i18n="skillsPythonText">En Python, tengo 4 años de experiencia con NumPy, SciPy, Matplotlib, scikit-learn y PyTorch. También poseo conocimientos en Podman, Podman Compose (contenerización), Bash (scripting), Git, y Flutter.</p>
+        </section>
+
+        <section id="experience" class="section">
+            <h2 data-i18n="experienceTitle">Experiencia</h2>
+            <div class="job-entry">
+                <h3 data-i18n="jobApexarTitle">Asistente de Ingeniería - Área Software</h3>
+                <p data-i18n="jobApexarDate">Apexar Technologies S.A. | 10/2024 - actualidad</p>
+                <ul>
+                    <li data-i18n="jobApexarDesc1">Diseño y desarrollo de soluciones web con el SDK de Dart/Flutter.</li>
+                    <li data-i18n="jobApexarDesc2">Diseño y testing de APIs.</li>
+                    <li data-i18n="jobApexarDesc3">Diseño y desarrollo de pipeline de CI/CD.</li>
+                    <li data-i18n="jobApexarDesc4">Trabajo bajo la cultura de mejora continua y desarrollo bajo normas.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <h3 data-i18n="jobUBAHelpTitle">Ayudante de Cátedra - Departamento de Matemática</h3>
+                <p data-i18n="jobUBAHelpDate">Universidad de Buenos Aires - FCEYN | 01/2024 - 10/2024</p>
+                <ul>
+                    <li data-i18n="jobUBAHelpDesc1">Enseñanza de álgebra, álgebra lineal, matemática discreta, métodos numéricos, y Python orientado a la simulación y resolución de problemas numéricos a cursos de entre 50 y 150 personas.</li>
+                    <li data-i18n="jobUBAHelpDesc2">Herramientas: Python (NumPy, SciPy, Matplotlib).</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <h3 data-i18n="jobUBADivulgadorTitle">Divulgador Científico</h3>
+                <p data-i18n="jobUBADivulgadorDate">Universidad de Buenos Aires - FCEYN | 08/2022 - 11/2023</p>
+                <ul>
+                    <li data-i18n="jobUBADivulgadorDesc1">Dirección de actividades de grupos de entre 10 a 60 personas, divulgación de conceptos de ciencia y tecnología en el marco de la Feria de Ciencia y Tecnología del Polo Científico y Tecnológico de Tecnópolis.</li>
+                </ul>
+            </div>
+            <div class="job-entry">
+                <h3 data-i18n="jobCryticalTitle">Técnico - Electromecánico</h3>
+                <p data-i18n="jobCryticalDate">Crytical system S.R.L | 02/2019 - 08/2022</p>
+                <ul>
+                    <li data-i18n="jobCryticalDesc1">Diseño, planificación y desarrollo de obras industriales eléctricas y de refrigeración para clientes como FATE, Telecom y otros grandes clientes tecnológicos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2 data-i18n="educationTitle">Educación</h2>
+            <ul>
+                <li><strong data-i18n="eduDataScienceDegree">Licenciatura en Ciencias de Datos:</strong> Universidad de Buenos Aires | 2022 - actualidad</li>
+                <li><strong data-i18n="eduDataScienceBachelor">Bachiller Universitario de Ciencias de Datos:</strong> Universidad de Buenos Aires | 2022 - 2024</li>
+                <li><strong data-i18n="eduElectromechanicalTech">Secundario Técnico Electromecánico:</strong> Instituto Juan Segundo Fernández | 2011 - 2018</li>
+            </ul>
+            <h3 data-i18n="participationsTitle">Participaciones</h3>
+            <ul>
+                <li data-i18n="partPhysics">Semana de la Física (2021, 2022, 2023)</li>
+                <li data-i18n="partBiology">Semana de la Biología (2021)</li>
+                <li data-i18n="partMath">Semana de la Matemática (2022, 2023, 2024)</li>
+                <li data-i18n="partComputing">Semana de la Computación (2022, 2024)</li>
+                <li data-i18n="partMuseums">Noche de los Museos (2024)</li>
+                <li data-i18n="partFIFA">Talleres de Python de la FIFA (2025)</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 data-i18n="projectsTitle">Mis Proyectos de GitHub</h2>
+            <div id="projects-container" class="projects-grid">
+                <p data-i18n="projectsLoading">Cargando proyectos...</p>
+            </div>
+        </section>
+
         <section id="contact" class="section">
             <h2 data-i18n="contactTitle">Contacto</h2>
             <p data-i18n="contactText">Puedes contactarme a través de:</p>
@@ -53,11 +124,11 @@
 
     <footer>
         <div class="container">
-            <p data-i18n="footerCopyright">&copy; 2025 Facundo Nicolás Munhó Vital. Todos los derechos reservados.</p>
+            <p data-i18n="footerCopyright" data-i18n-html="true">&copy; 2025 Facundo Nicolás Munhó Vital. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="translations.js"></script> 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
