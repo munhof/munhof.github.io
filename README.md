@@ -9,6 +9,9 @@ GitHub Pages.
 formación, los proyectos y los textos en español e inglés. Tanto `index.html`
 como `cv.html` se renderizan desde ese archivo.
 
+La fuente pública no incluye teléfono ni domicilio exacto. El CV web utiliza
+correo, LinkedIn, ubicación general y portafolio como datos de contacto.
+
 Para actualizar la web y ambos CV:
 
 1. Editar `data/profile.json`.
