@@ -159,7 +159,6 @@ function renderCv() {
   document.getElementById("cv-headline").textContent = copy.cv.headline;
   document.getElementById("cv-contact").innerHTML = `
     <div>${escapeHtml(profile.person.location)}</div>
-    <div>${escapeHtml(profile.person.phone)}</div>
     <div><a href="mailto:${escapeHtml(profile.person.email)}">${escapeHtml(profile.person.email)}</a></div>
     <div><a href="${escapeHtml(profile.person.links.linkedin)}">linkedin.com/in/facundomunho</a></div>
     <div><a href="${escapeHtml(profile.person.links.website)}">munhof.com.ar</a></div>
