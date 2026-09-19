@@ -1,42 +1,444 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const githubUsername = 'munhof'; // ¡Asegúrate de que este sea tu nombre de usuario de GitHub!
-    const projectsContainer = document.getElementById('projects-container');
+import { layout, prepare, setLocale } from "https://esm.sh/@chenglou/pretext@0.0.3";
 
-    fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&direction=desc`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(repos => {
-            projectsContainer.innerHTML = ''; // Limpiar el mensaje de "Cargando proyectos..."
-            
-            if (repos.length === 0) {
-                projectsContainer.innerHTML = '<p>No hay proyectos públicos disponibles en este momento.</p>';
-                return;
-            }
+const state = {
+  profile: null,
+  lang: "es",
+};
 
-            repos.forEach(repo => {
-                // Filtra repositorios que podrías no querer mostrar (ej. el de github pages)
-                if (repo.name === 'munhof.github.io') {
-                    return; // Saltar este repositorio
-                }
+let projectTitleObserver;
 
-                const projectCard = document.createElement('div');
-                projectCard.classList.add('project-card');
+const get = (object, path) => path.split(".").reduce(
+  (value, key) => value?.[key],
+  object,
+);
 
-                projectCard.innerHTML = `
-                    <h3>${repo.name}</h3>
-                    <p>${repo.description || 'Sin descripción.'}</p>
-                    <p>Lenguaje principal: ${repo.language || 'N/A'}</p>
-                    <a href="${repo.html_url}" target="_blank" class="button">Ver en GitHub</a>
-                `;
-                projectsContainer.appendChild(projectCard);
-            });
-        })
-        .catch(error => {
-            console.error('Error al cargar los proyectos de GitHub:', error);
-            projectsContainer.innerHTML = '<p>Lo siento, no pude cargar los proyectos. Intenta de nuevo más tarde.</p>';
-        });
-});
+const escapeHtml = (value) => String(value)
+  .replaceAll("&", "&amp;")
+  .replaceAll("<", "&lt;")
+  .replaceAll(">", "&gt;")
+  .replaceAll('"', "&quot;")
+  .replaceAll("'", "&#039;");
+
+function preferredLanguage() {
+  const query = new URLSearchParams(window.location.search).get("lang");
+  if (["es", "en"].includes(query)) return query;
+
+  const saved = localStorage.getItem("portfolio-language");
+  if (["es", "en"].includes(saved)) return saved;
+
+  return navigator.language.toLowerCase().startsWith("es") ? "es" : "en";
+}
+
+function localized() {
+  return state.profile.i18n[state.lang];
+}
+
+function formatDate(value) {
+  if (!value) return localized().ui.present;
+  if (/^\d{4}$/.test(value)) return value;
+
+  const [year, month] = value.split("-").map(Number);
+  return new Intl.DateTimeFormat(state.lang === "es" ? "es-AR" : "en", {
+    month: "short",
+    year: "numeric",
+  }).format(new Date(Date.UTC(year, month - 1, 1)));
+}
+
+function dateRange(item) {
+  return `${formatDate(item.start)} — ${formatDate(item.end)}`;
+}
+
+function initStarfield() {
+  const canvas = document.querySelector(".starfield");
+  const context = canvas?.getContext("2d");
+  if (!context) return;
+
+  let stars = [];
+  let bursts = [];
+  let twinkles = [];
+  let frame;
+
+  function draw(time = performance.now()) {
+    const width = canvas.width / window.devicePixelRatio;
+    const height = canvas.height / window.devicePixelRatio;
+    const isLight = document.documentElement.dataset.theme === "light";
+    const starColor = isLight ? "109, 61, 227" : "224, 231, 255";
+
+    context.clearRect(0, 0, width, height);
+    stars.forEach((star) => {
+      context.fillStyle = `rgba(${starColor}, ${star.opacity})`;
+      context.beginPath();
+      context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+      context.fill();
+    });
+
+    twinkles = twinkles.filter((twinkle) => time - twinkle.createdAt < 1800);
+    twinkles.forEach((twinkle) => {
+      const progress = (time - twinkle.createdAt) / 1800;
+      context.fillStyle = `rgba(196, 181, 253, ${Math.sin(progress * Math.PI) * 0.7})`;
+      context.beginPath();
+      context.arc(twinkle.x, twinkle.y, twinkle.radius, 0, Math.PI * 2);
+      context.fill();
+    });
+
+    bursts = bursts.filter((burst) => time - burst.createdAt < 850);
+    bursts.forEach((burst) => {
+      const progress = (time - burst.createdAt) / 850;
+      const opacity = (1 - progress) * 0.8;
+      context.fillStyle = `rgba(196, 181, 253, ${opacity})`;
+      burst.stars.forEach((star) => {
+        const distance = star.distance * progress;
+        context.beginPath();
+        context.arc(
+          burst.x + Math.cos(star.angle) * distance,
+          burst.y + Math.sin(star.angle) * distance,
+          star.radius * (1 - progress * 0.35),
+          0,
+          Math.PI * 2,
+        );
+        context.fill();
+      });
+    });
+
+    if (bursts.length || twinkles.length) frame = requestAnimationFrame(draw);
+    else frame = undefined;
+  }
+
+  function resize() {
+    const ratio = window.devicePixelRatio || 1;
+    canvas.width = window.innerWidth * ratio;
+    canvas.height = window.innerHeight * ratio;
+    context.setTransform(ratio, 0, 0, ratio, 0, 0);
+    stars = Array.from({length: Math.ceil((window.innerWidth * window.innerHeight) / 18000)}, () => ({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      radius: Math.random() * 0.8 + 0.25,
+      opacity: Math.random() * 0.22 + 0.08,
+    }));
+    cancelAnimationFrame(frame);
+    draw();
+  }
+
+  document.addEventListener("click", (event) => {
+    if (event.target.closest("a, button, input, select, textarea")) return;
+
+    bursts.push({
+      x: event.clientX,
+      y: event.clientY,
+      createdAt: performance.now(),
+      stars: Array.from({length: 22}, () => ({
+        angle: Math.random() * Math.PI * 2,
+        distance: Math.random() * 72 + 12,
+        radius: Math.random() * 1.4 + 0.5,
+      })),
+    });
+    if (!frame) draw();
+  });
+
+  window.setInterval(() => {
+    if (document.hidden) return;
+    twinkles.push({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      radius: Math.random() * 1.2 + 0.7,
+      createdAt: performance.now(),
+    });
+    if (!frame) draw();
+  }, 1900);
+
+  window.addEventListener("resize", resize);
+  window.addEventListener("themechange", () => draw());
+  resize();
+}
+
+function applyStaticCopy() {
+  const copy = localized();
+  document.documentElement.lang = state.lang;
+  document.title = copy.meta.title;
+  document.querySelector('meta[name="description"]')?.setAttribute(
+    "content",
+    copy.meta.description,
+  );
+
+  document.querySelectorAll("[data-copy]").forEach((element) => {
+    const value = get(copy, element.dataset.copy);
+    if (typeof value === "string") element.textContent = value;
+  });
+
+  document.querySelectorAll("[data-lang]").forEach((button) => {
+    const active = button.dataset.lang === state.lang;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
+function renderPortfolio() {
+  const profile = state.profile;
+  const copy = localized();
+
+  document.querySelector("[data-cv-link]").href = `cv.html?lang=${state.lang}`;
+  document.getElementById("stats").innerHTML = copy.stats.map((stat) => `
+    <div class="stat">
+      <strong>${escapeHtml(stat.value)}</strong>
+      <span>${escapeHtml(stat.label)}</span>
+    </div>
+  `).join("");
+
+  document.getElementById("principles").innerHTML = copy.about.principles
+    .map((principle) => `
+      <article class="principle">
+        <strong>${escapeHtml(principle.title)}</strong>
+        <p>${escapeHtml(principle.text)}</p>
+      </article>
+    `).join("");
+
+  document.getElementById("story").innerHTML = copy.about.story
+    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+    .join("");
+
+  document.getElementById("projects-grid").innerHTML = profile.projects
+    .map((project, index) => {
+      const text = copy.projects[project.id];
+      return `
+        <article class="project-card reveal">
+          <span class="project-number">0${index + 1} / 0${profile.projects.length}</span>
+          <h3>${escapeHtml(project.name)}</h3>
+          <span class="project-kicker">${escapeHtml(text.kicker)}</span>
+          <p>${escapeHtml(text.description)}</p>
+          <div class="tag-list">
+            ${project.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}
+          </div>
+          <a class="text-link" href="${escapeHtml(project.url)}" target="_blank" rel="noreferrer">
+            ${escapeHtml(copy.ui.viewProject)} ↗
+          </a>
+        </article>
+      `;
+    }).join("");
+
+  document.getElementById("experience-list").innerHTML = profile.experience
+    .map((job) => {
+      const text = copy.experience[job.id];
+      return `
+        <article class="timeline-item reveal">
+          <div class="timeline-date">${escapeHtml(dateRange(job))}</div>
+          <div>
+            <h3>${escapeHtml(text.role)}</h3>
+            <div class="timeline-org">${escapeHtml(job.organization)}</div>
+            <p class="timeline-summary">${escapeHtml(text.summary)}</p>
+          </div>
+        </article>
+      `;
+    }).join("");
+
+  document.getElementById("education-list").innerHTML = profile.education
+    .map((item) => {
+      const text = copy.education[item.id];
+      return `
+        <article class="education-card reveal">
+          <span class="date">${escapeHtml(dateRange(item))}</span>
+          <h3>${escapeHtml(text.degree)}</h3>
+          <p class="institution">${escapeHtml(item.institution)}</p>
+          <p>${escapeHtml(text.status)} ${escapeHtml(text.details)}</p>
+        </article>
+      `;
+    }).join("");
+
+  document.getElementById("skills-grid").innerHTML = profile.skills
+    .map((group) => `
+      <article class="skill-group reveal">
+        <h3>${escapeHtml(copy.skillGroups[group.id])}</h3>
+        <div class="skill-tags">
+          ${group.items.map((skill) => `<span>${escapeHtml(skill)}</span>`).join("")}
+        </div>
+      </article>
+    `).join("");
+
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+  document.getElementById("updated").textContent = new Intl.DateTimeFormat(
+    state.lang === "es" ? "es-AR" : "en",
+    {dateStyle: "long"},
+  ).format(new Date(`${profile.updated}T12:00:00Z`));
+
+  fitProjectTitles();
+  activateReveal();
+}
+
+function fitProjectTitle(card, width) {
+  const title = card.querySelector("h3");
+  if (!title) return;
+
+  const availableWidth = width - 56;
+  const lineLimit = 2;
+  let size = 54;
+
+  while (size > 32) {
+    const prepared = prepare(title.textContent, `700 ${size}px Manrope`, {
+      letterSpacing: -0.06 * size,
+    });
+    if (layout(prepared, availableWidth, size).lineCount <= lineLimit) break;
+    size -= 1;
+  }
+
+  title.style.setProperty("--project-title-size", `${size}px`);
+}
+
+async function fitProjectTitles() {
+  await document.fonts.ready;
+  projectTitleObserver?.disconnect();
+  if (!("ResizeObserver" in window)) return;
+
+  setLocale(state.lang === "es" ? "es-AR" : "en-US");
+  projectTitleObserver = new ResizeObserver((entries) => {
+    entries.forEach((entry) => fitProjectTitle(entry.target, entry.contentRect.width));
+  });
+  document.querySelectorAll(".project-card").forEach((card) => {
+    projectTitleObserver.observe(card);
+  });
+}
+
+function renderCv() {
+  const profile = state.profile;
+  const copy = localized();
+
+  document.getElementById("cv-name").textContent = profile.person.name;
+  document.getElementById("cv-headline").textContent = copy.cv.headline;
+  document.getElementById("cv-contact").innerHTML = `
+    <div>${escapeHtml(profile.person.location)}</div>
+    <div><a href="mailto:${escapeHtml(profile.person.email)}">${escapeHtml(profile.person.email)}</a></div>
+    <div><a href="${escapeHtml(profile.person.links.linkedin)}">linkedin.com/in/facundomunho</a></div>
+    <div><a href="${escapeHtml(profile.person.links.website)}">munhof.com.ar</a></div>
+  `;
+
+  document.getElementById("cv-skills").innerHTML = profile.skills.map((group) => `
+    <div>
+      <strong>${escapeHtml(copy.skillGroups[group.id])}</strong>
+      <p>${group.items.map(escapeHtml).join(", ")}</p>
+    </div>
+  `).join("");
+
+  document.getElementById("cv-experience").innerHTML = profile.experience
+    .map((job) => {
+      const text = copy.experience[job.id];
+      return `
+        <article class="cv-entry">
+          <h3>${escapeHtml(text.role)}</h3>
+          <span class="meta">${escapeHtml(dateRange(job))}</span>
+          <span class="meta">${escapeHtml(job.organization)} · ${escapeHtml(job.location)}</span>
+          <ul>${text.bullets.map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join("")}</ul>
+        </article>
+      `;
+    }).join("");
+
+  document.getElementById("cv-education").innerHTML = profile.education
+    .map((item) => {
+      const text = copy.education[item.id];
+      return `
+        <article class="cv-entry">
+          <h3>${escapeHtml(text.degree)}</h3>
+          <span class="meta">${escapeHtml(dateRange(item))}</span>
+          <span class="meta">${escapeHtml(item.institution)}</span>
+          <p class="details">${escapeHtml(text.status)} ${escapeHtml(text.details)}</p>
+        </article>
+      `;
+    }).join("");
+
+  document.getElementById("cv-projects").innerHTML = copy.cv.projectBullets
+    .map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join("");
+  document.getElementById("cv-languages").textContent = profile.languages
+    .map((language) => copy.languages[language]).join(" · ");
+
+  const fileName = state.lang === "es"
+    ? "CV-Facundo-Munho-ES"
+    : "CV-Facundo-Munho-EN";
+  document.title = fileName;
+}
+
+function activateReveal() {
+  const items = document.querySelectorAll(".reveal:not(.visible)");
+  if (!("IntersectionObserver" in window)) {
+    items.forEach((item) => item.classList.add("visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.12});
+  items.forEach((item) => observer.observe(item));
+}
+
+function render() {
+  applyStaticCopy();
+  if (document.body.dataset.page === "cv") renderCv();
+  else renderPortfolio();
+}
+
+function setLanguage(lang) {
+  if (!["es", "en"].includes(lang)) return;
+  state.lang = lang;
+  localStorage.setItem("portfolio-language", lang);
+
+  const url = new URL(window.location.href);
+  if (document.body.dataset.page === "cv") {
+    url.searchParams.set("lang", lang);
+    history.replaceState({}, "", url);
+  }
+  render();
+}
+
+function setupControls() {
+  document.querySelectorAll("[data-lang]").forEach((button) => {
+    button.addEventListener("click", () => setLanguage(button.dataset.lang));
+  });
+
+  document.querySelector("[data-print]")?.addEventListener("click", () => window.print());
+
+  const themeButton = document.querySelector(".theme-toggle");
+  const savedTheme = localStorage.getItem("portfolio-theme");
+  const preferredTheme = window.matchMedia("(prefers-color-scheme: light)").matches
+    ? "light"
+    : "dark";
+  const initialTheme = savedTheme || preferredTheme;
+  if (document.body.dataset.page !== "cv") {
+    document.documentElement.dataset.theme = initialTheme;
+  }
+
+  themeButton?.addEventListener("click", () => {
+    const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem("portfolio-theme", next);
+    window.dispatchEvent(new Event("themechange"));
+  });
+
+  const menu = document.getElementById("main-nav");
+  const menuButton = document.querySelector(".menu-toggle");
+  menuButton?.addEventListener("click", () => {
+    const open = menu.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(open));
+  });
+  menu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+    menu.classList.remove("open");
+    menuButton?.setAttribute("aria-expanded", "false");
+  }));
+}
+
+async function init() {
+  try {
+    const response = await fetch("data/profile.json");
+    if (!response.ok) throw new Error(`Profile request failed: ${response.status}`);
+    state.profile = await response.json();
+    state.lang = preferredLanguage();
+    setupControls();
+    initStarfield();
+    render();
+  } catch (error) {
+    console.error(error);
+    document.body.classList.add("load-error");
+  }
+}
+
+init();

@@ -1,0 +1,422 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-09-17",
+  "person": {
+    "name": "Facundo Nicolás Munhó Vital",
+    "shortName": "Facundo Munhó",
+    "location": "General Pacheco, Buenos Aires, Argentina",
+    "email": "facundomunho@gmail.com",
+    "links": {
+      "website": "https://munhof.com.ar",
+      "github": "https://github.com/munhof",
+      "linkedin": "https://www.linkedin.com/in/facundomunho/"
+    }
+  },
+  "skills": [
+    {
+      "id": "data",
+      "items": ["Python", "Pandas", "NumPy", "SciPy", "scikit-learn", "PyTorch", "R", "Jupyter"]
+    },
+    {
+      "id": "software",
+      "items": ["REST APIs", "SQL", "Dart", "Flutter", "Bash", "C++", "Java", "Kotlin"]
+    },
+    {
+      "id": "platform",
+      "items": ["Podman", "Docker", "CI/CD", "GitHub Actions", "Git", "IaC"]
+    }
+  ],
+  "experience": [
+    {
+      "id": "undelta",
+      "organization": "Universidad Nacional del Delta",
+      "location": "Buenos Aires, Argentina",
+      "start": "2026-08",
+      "end": null
+    },
+    {
+      "id": "apexar",
+      "organization": "Apexar Technologies S.A.",
+      "location": "Buenos Aires, Argentina",
+      "start": "2024-10",
+      "end": null
+    },
+    {
+      "id": "uba",
+      "organization": "Universidad de Buenos Aires · FCEyN",
+      "location": "Buenos Aires, Argentina",
+      "start": "2024-01",
+      "end": "2024-10"
+    },
+    {
+      "id": "crytical",
+      "organization": "Crytical Systems S.R.L.",
+      "location": "Buenos Aires, Argentina",
+      "start": "2019-02",
+      "end": "2022-08"
+    }
+  ],
+  "education": [
+    {
+      "id": "data-science",
+      "institution": "Universidad de Buenos Aires · FCEyN",
+      "start": "2022",
+      "end": "2026"
+    },
+    {
+      "id": "physics",
+      "institution": "Universidad de Buenos Aires · FCEyN",
+      "start": "2019",
+      "end": "2023"
+    },
+    {
+      "id": "technician",
+      "institution": "Instituto Juan Segundo Fernández",
+      "start": "2011",
+      "end": "2018"
+    }
+  ],
+  "projects": [
+    {
+      "id": "storm",
+      "name": "STORM",
+      "url": "https://github.com/munhof/STORM",
+      "tags": ["Python", "MLOps", "Reproducibility", "APIs"]
+    },
+    {
+      "id": "rainstorm",
+      "name": "RAINSTORM",
+      "url": "https://github.com/munhof/RAINSTORM",
+      "tags": ["PyTorch", "Behavior", "VAME", "Keypoint-MoSeq"]
+    },
+    {
+      "id": "teaching-python",
+      "name": "Python · UNDelta",
+      "url": "https://github.com/munhof/Python-UNDELTA",
+      "tags": ["Python", "Teaching", "Data Science"]
+    }
+  ],
+  "languages": ["spanish", "english", "portuguese", "german"],
+  "i18n": {
+    "es": {
+      "meta": {
+        "title": "Facundo Munhó · Ciencia de Datos e Ingeniería de Software",
+        "description": "Portafolio de Facundo Munhó: ciencia de datos, machine learning, ingeniería de software, investigación y docencia."
+      },
+      "ui": {
+        "navAbout": "Perfil",
+        "navProjects": "Proyectos",
+        "navExperience": "Experiencia",
+        "navEducation": "Formación",
+        "navContact": "Contacto",
+        "skip": "Saltar al contenido",
+        "menu": "Abrir menú",
+        "theme": "Cambiar tema",
+        "language": "Idioma",
+        "viewProject": "Ver proyecto",
+        "viewGithub": "GitHub",
+        "viewLinkedin": "LinkedIn",
+        "openCv": "Ver CV",
+        "cvSpanish": "CV en español",
+        "cvEnglish": "CV en inglés",
+        "printCv": "Guardar como PDF",
+        "backPortfolio": "Volver al portafolio",
+        "present": "actualidad",
+        "contactCta": "Hablemos",
+        "contactText": "¿Tenés un problema de datos, modelado o software que valga la pena resolver?",
+        "contactEmail": "Escribirme por email",
+        "updated": "Información actualizada",
+        "sourceNote": "La web y ambos CV se generan desde la misma fuente de datos.",
+        "rights": "Todos los derechos reservados.",
+        "cvTitle": "Currículum vitae",
+        "professionalSummary": "Resumen profesional",
+        "technicalSkills": "Habilidades técnicas",
+        "workExperience": "Experiencia laboral",
+        "education": "Formación",
+        "projectsTeaching": "Proyectos y participación académica",
+        "languages": "Idiomas"
+      },
+      "hero": {
+        "eyebrow": "Ciencia de datos · Ingeniería de software · Investigación",
+        "title": "Convierto modelos y datos en sistemas trazables.",
+        "summary": "Científico de datos e ingeniero de software. Trabajo en la intersección entre machine learning, software reproducible y problemas científicos.",
+        "status": "Licenciado en Ciencias de Datos · UBA",
+        "availability": "Abierto a proyectos de datos, software e investigación"
+      },
+      "about": {
+        "title": "Quién soy",
+        "lead": "Me mueve entender problemas complejos y convertirlos en herramientas que sean claras, útiles y duraderas.",
+        "story": [
+          "Mi recorrido no fue lineal: la formación técnica me acercó a los sistemas reales, la física me enseñó a modelar con rigor y la ciencia de datos me dio el lenguaje para unir esas dos formas de pensar.",
+          "Disfruto trabajar donde la investigación y el software se encuentran. Me importa hacer preguntas antes de elegir una solución, dejar los procesos mejor documentados de lo que los encontré y construir cosas que otras personas puedan comprender, revisar y continuar."
+        ],
+        "principles": [
+          {"title": "Reproducible", "text": "Datos, configuración, métricas y artefactos con una historia verificable."},
+          {"title": "Interdisciplinario", "text": "Matemática, software y conocimiento del dominio en la misma conversación."},
+          {"title": "Transferible", "text": "Herramientas pensadas para investigación, producción y enseñanza."}
+        ]
+      },
+      "stats": [
+        {"value": "3", "label": "Proyectos destacados"},
+        {"value": "2026", "label": "Egreso en Ciencia de Datos"},
+        {"value": "ES / EN", "label": "Portafolio y CV sincronizados"}
+      ],
+      "sections": {
+        "projectsEyebrow": "Trabajo seleccionado",
+        "projectsTitle": "Proyectos con una idea central: que los modelos se puedan entender y reutilizar.",
+        "experienceEyebrow": "Recorrido",
+        "experienceTitle": "Experiencia en software, datos y docencia.",
+        "educationEyebrow": "Formación",
+        "educationTitle": "Base científica, construcción práctica.",
+        "skillsEyebrow": "Herramientas",
+        "skillsTitle": "Tecnologías que uso para llevar una idea a producción."
+      },
+      "skillGroups": {
+        "data": "Datos y modelado",
+        "software": "Desarrollo de software",
+        "platform": "Plataforma y entrega"
+      },
+      "projects": {
+        "storm": {
+          "kicker": "Framework de modelado",
+          "description": "Sistema para orquestar, evaluar y reutilizar modelos con trazabilidad. Separa el núcleo de modelado de las implementaciones específicas y mantiene la API independiente del protocolo."
+        },
+        "rainstorm": {
+          "kicker": "Tesis · comportamiento animal",
+          "description": "Pipeline reproducible para cuantificación no supervisada de comportamiento a partir de pose. Integra VAME y Keypoint-MoSeq y compara representaciones de pose con contexto espacial."
+        },
+        "teaching-python": {
+          "kicker": "Docencia abierta",
+          "description": "Materiales y laboratorios de Python para introducir análisis de datos, visualización y aprendizaje automático desde problemas concretos."
+        }
+      },
+      "experience": {
+        "undelta": {
+          "role": "Jefe de Trabajos Prácticos · Introducción al Aprendizaje Automático",
+          "summary": "Diseño de clases prácticas, ejercicios y materiales para conectar fundamentos matemáticos con flujos reales de análisis en Python.",
+          "bullets": [
+            "Planificación de actividades sobre datos, modelos, métricas y regresión.",
+            "Desarrollo de guías reproducibles y recursos de evaluación."
+          ]
+        },
+        "apexar": {
+          "role": "Asistente de Ingeniería de Software · Área Web",
+          "summary": "Desarrollo full-stack, contratos de API y automatización de entornos reproducibles.",
+          "bullets": [
+            "Desarrollo de aplicaciones web con Dart y Flutter.",
+            "Diseño y documentación de APIs REST y servidores mock para pruebas aisladas.",
+            "Automatización de build, CI/CD y entornos contenerizados con Bash y Podman."
+          ]
+        },
+        "uba": {
+          "role": "Ayudante de Cátedra · Departamento de Matemática",
+          "summary": "Clases de álgebra, métodos numéricos y simulación con Python para cursos de hasta 150 estudiantes.",
+          "bullets": [
+            "Desarrollo de módulos de simulación con NumPy, SciPy y Matplotlib.",
+            "Acompañamiento en resolución numérica, depuración y buenas prácticas."
+          ]
+        },
+        "crytical": {
+          "role": "Técnico Electromecánico",
+          "summary": "Diseño y planificación de instalaciones eléctricas y de refrigeración industrial.",
+          "bullets": [
+            "Proyectos para infraestructura crítica de clientes como FATE y Telecom.",
+            "Coordinación de cuadrillas y cumplimiento de requisitos de seguridad."
+          ]
+        }
+      },
+      "education": {
+        "data-science": {
+          "degree": "Licenciatura en Ciencias de Datos",
+          "status": "Carrera finalizada en agosto de 2026; título en trámite.",
+          "details": "Tesis: Categorización no supervisada de patrones de comportamiento animal mediante redes neuronales profundas."
+        },
+        "physics": {
+          "degree": "Licenciatura en Ciencias Físicas · estudios parciales",
+          "status": "Formación troncal completada en cálculo, mecánica e instrumentación.",
+          "details": "Reorientación hacia Ciencia de Datos para especializarme en modelado computacional."
+        },
+        "technician": {
+          "degree": "Técnico Electromecánico",
+          "status": "Educación técnica secundaria.",
+          "details": "Formación en sistemas eléctricos, mecánicos y de refrigeración."
+        }
+      },
+      "languages": {
+        "spanish": "Español · nativo",
+        "english": "Inglés · técnico intermedio",
+        "portuguese": "Portugués · intermedio",
+        "german": "Alemán · básico"
+      },
+      "cv": {
+        "headline": "Científico de Datos e Ingeniero de Software",
+        "summary": "Científico de datos e ingeniero de software con formación en matemática, estadística y modelado computacional. Experiencia construyendo pipelines reproducibles, APIs, automatización CI/CD y herramientas que integran modelos de aprendizaje automático en sistemas mantenibles.",
+        "projectBullets": [
+          "Tesis de Licenciatura (2025–2026): framework reproducible para analizar datos de pose y comparar VAME y Keypoint-MoSeq en categorización no supervisada de comportamiento animal.",
+          "STORM: framework para orquestación, evaluación, trazabilidad y reutilización de modelos.",
+          "Taller de Python Científico (2025): curso intensivo para más de 20 participantes sobre adquisición de datos, procesamiento de señales y simulación con SciPy."
+        ]
+      }
+    },
+    "en": {
+      "meta": {
+        "title": "Facundo Munhó · Data Science & Software Engineering",
+        "description": "Facundo Munhó's portfolio: data science, machine learning, software engineering, research and teaching."
+      },
+      "ui": {
+        "navAbout": "Profile",
+        "navProjects": "Projects",
+        "navExperience": "Experience",
+        "navEducation": "Education",
+        "navContact": "Contact",
+        "skip": "Skip to content",
+        "menu": "Open menu",
+        "theme": "Switch theme",
+        "language": "Language",
+        "viewProject": "View project",
+        "viewGithub": "GitHub",
+        "viewLinkedin": "LinkedIn",
+        "openCv": "View résumé",
+        "cvSpanish": "Spanish résumé",
+        "cvEnglish": "English résumé",
+        "printCv": "Save as PDF",
+        "backPortfolio": "Back to portfolio",
+        "present": "present",
+        "contactCta": "Let's talk",
+        "contactText": "Have a data, modeling or software problem worth solving?",
+        "contactEmail": "Email me",
+        "updated": "Information updated",
+        "sourceNote": "The website and both résumés are generated from the same data source.",
+        "rights": "All rights reserved.",
+        "cvTitle": "Résumé",
+        "professionalSummary": "Professional summary",
+        "technicalSkills": "Technical skills",
+        "workExperience": "Work experience",
+        "education": "Education",
+        "projectsTeaching": "Projects and academic engagement",
+        "languages": "Languages"
+      },
+      "hero": {
+        "eyebrow": "Data science · Software engineering · Research",
+        "title": "I turn models and data into traceable systems.",
+        "summary": "Data scientist and software engineer working at the intersection of machine learning, reproducible software and scientific problems.",
+        "status": "Licentiate in Data Science · UBA",
+        "availability": "Open to data, software and research projects"
+      },
+      "about": {
+        "title": "Who I am",
+        "lead": "I am driven by understanding complex problems and turning them into tools that are clear, useful and built to last.",
+        "story": [
+          "My path has not been linear: technical training brought me close to real systems, physics taught me to model with rigor, and data science gave me the language to connect those two ways of thinking.",
+          "I enjoy working where research and software meet. I care about asking questions before choosing a solution, leaving processes better documented than I found them, and building things that other people can understand, review and carry forward."
+        ],
+        "principles": [
+          {"title": "Reproducible", "text": "Data, configuration, metrics and artifacts with a verifiable history."},
+          {"title": "Interdisciplinary", "text": "Mathematics, software and domain knowledge in the same conversation."},
+          {"title": "Transferable", "text": "Tools designed for research, production and teaching."}
+        ]
+      },
+      "stats": [
+        {"value": "3", "label": "Featured projects"},
+        {"value": "2026", "label": "Data Science graduation"},
+        {"value": "ES / EN", "label": "Synchronized portfolio and résumés"}
+      ],
+      "sections": {
+        "projectsEyebrow": "Selected work",
+        "projectsTitle": "Projects built around one idea: models should be understandable and reusable.",
+        "experienceEyebrow": "Path",
+        "experienceTitle": "Experience across software, data and teaching.",
+        "educationEyebrow": "Education",
+        "educationTitle": "Scientific foundations, practical building.",
+        "skillsEyebrow": "Toolkit",
+        "skillsTitle": "Technologies I use to take an idea into production."
+      },
+      "skillGroups": {
+        "data": "Data and modeling",
+        "software": "Software development",
+        "platform": "Platform and delivery"
+      },
+      "projects": {
+        "storm": {
+          "kicker": "Modeling framework",
+          "description": "A system for orchestrating, evaluating and reusing traceable models. It separates the modeling core from specific implementations and keeps its API independent from transport protocols."
+        },
+        "rainstorm": {
+          "kicker": "Thesis · animal behavior",
+          "description": "A reproducible pipeline for unsupervised behavior quantification from pose data. It integrates VAME and Keypoint-MoSeq and compares pose-only representations with spatial context."
+        },
+        "teaching-python": {
+          "kicker": "Open teaching",
+          "description": "Python materials and labs introducing data analysis, visualization and machine learning through concrete problems."
+        }
+      },
+      "experience": {
+        "undelta": {
+          "role": "Teaching Assistant · Introduction to Machine Learning",
+          "summary": "Designing practical classes, exercises and materials that connect mathematical foundations with real Python analysis workflows.",
+          "bullets": [
+            "Planning activities on data, models, metrics and regression.",
+            "Developing reproducible guides and assessment resources."
+          ]
+        },
+        "apexar": {
+          "role": "Software Engineering Assistant · Web Area",
+          "summary": "Full-stack development, API contracts and reproducible environment automation.",
+          "bullets": [
+            "Web application development with Dart and Flutter.",
+            "REST API design and documentation, plus mock servers for isolated testing.",
+            "Build, CI/CD and containerized-environment automation with Bash and Podman."
+          ]
+        },
+        "uba": {
+          "role": "Teaching Assistant · Department of Mathematics",
+          "summary": "Algebra, numerical methods and Python simulation classes for cohorts of up to 150 students.",
+          "bullets": [
+            "Simulation modules using NumPy, SciPy and Matplotlib.",
+            "Mentoring in numerical problem solving, debugging and good practices."
+          ]
+        },
+        "crytical": {
+          "role": "Electromechanical Technician",
+          "summary": "Design and planning of industrial electrical and refrigeration systems.",
+          "bullets": [
+            "Critical-infrastructure projects for clients including FATE and Telecom.",
+            "Field-crew coordination and safety-requirement compliance."
+          ]
+        }
+      },
+      "education": {
+        "data-science": {
+          "degree": "Licentiate in Data Science",
+          "status": "All degree requirements completed in August 2026; diploma issuance in progress.",
+          "details": "Thesis: Unsupervised Categorization of Animal Behavior Patterns Using Deep Neural Networks."
+        },
+        "physics": {
+          "degree": "Licentiate in Physical Sciences · partial studies",
+          "status": "Core coursework completed in calculus, mechanics and laboratory instrumentation.",
+          "details": "Shifted to Data Science to specialize in computational modeling."
+        },
+        "technician": {
+          "degree": "Electromechanical Technician",
+          "status": "Technical secondary education.",
+          "details": "Training in electrical, mechanical and refrigeration systems."
+        }
+      },
+      "languages": {
+        "spanish": "Spanish · native",
+        "english": "English · intermediate technical",
+        "portuguese": "Portuguese · intermediate",
+        "german": "German · basic"
+      },
+      "cv": {
+        "headline": "Data Scientist & Software Engineer",
+        "summary": "Data scientist and software engineer with a foundation in mathematics, statistics and computational modeling. Experienced in building reproducible pipelines, APIs, CI/CD automation and tools that integrate machine-learning models into maintainable systems.",
+        "projectBullets": [
+          "Undergraduate thesis (2025–2026): reproducible framework for pose-data analysis and comparison of VAME and Keypoint-MoSeq for unsupervised animal behavior categorization.",
+          "STORM: framework for model orchestration, evaluation, traceability and reuse.",
+          "Scientific Python Workshop (2025): intensive course for over 20 participants on data acquisition, signal processing and physical-system simulation with SciPy."
+        ]
+      }
+    }
+  }
+}
