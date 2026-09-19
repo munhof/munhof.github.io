@@ -1,7 +1,11 @@
+import { layout, prepare, setLocale } from "https://esm.sh/@chenglou/pretext@0.0.3";
+
 const state = {
   profile: null,
   lang: "es",
 };
+
+let projectTitleObserver;
 
 const get = (object, path) => path.split(".").reduce(
   (value, key) => value?.[key],
@@ -44,6 +48,109 @@ function dateRange(item) {
   return `${formatDate(item.start)} — ${formatDate(item.end)}`;
 }
 
+function initStarfield() {
+  const canvas = document.querySelector(".starfield");
+  const context = canvas?.getContext("2d");
+  if (!context) return;
+
+  let stars = [];
+  let bursts = [];
+  let twinkles = [];
+  let frame;
+
+  function draw(time = performance.now()) {
+    const width = canvas.width / window.devicePixelRatio;
+    const height = canvas.height / window.devicePixelRatio;
+    const isLight = document.documentElement.dataset.theme === "light";
+    const starColor = isLight ? "109, 61, 227" : "224, 231, 255";
+
+    context.clearRect(0, 0, width, height);
+    stars.forEach((star) => {
+      context.fillStyle = `rgba(${starColor}, ${star.opacity})`;
+      context.beginPath();
+      context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+      context.fill();
+    });
+
+    twinkles = twinkles.filter((twinkle) => time - twinkle.createdAt < 1800);
+    twinkles.forEach((twinkle) => {
+      const progress = (time - twinkle.createdAt) / 1800;
+      context.fillStyle = `rgba(196, 181, 253, ${Math.sin(progress * Math.PI) * 0.7})`;
+      context.beginPath();
+      context.arc(twinkle.x, twinkle.y, twinkle.radius, 0, Math.PI * 2);
+      context.fill();
+    });
+
+    bursts = bursts.filter((burst) => time - burst.createdAt < 850);
+    bursts.forEach((burst) => {
+      const progress = (time - burst.createdAt) / 850;
+      const opacity = (1 - progress) * 0.8;
+      context.fillStyle = `rgba(196, 181, 253, ${opacity})`;
+      burst.stars.forEach((star) => {
+        const distance = star.distance * progress;
+        context.beginPath();
+        context.arc(
+          burst.x + Math.cos(star.angle) * distance,
+          burst.y + Math.sin(star.angle) * distance,
+          star.radius * (1 - progress * 0.35),
+          0,
+          Math.PI * 2,
+        );
+        context.fill();
+      });
+    });
+
+    if (bursts.length || twinkles.length) frame = requestAnimationFrame(draw);
+    else frame = undefined;
+  }
+
+  function resize() {
+    const ratio = window.devicePixelRatio || 1;
+    canvas.width = window.innerWidth * ratio;
+    canvas.height = window.innerHeight * ratio;
+    context.setTransform(ratio, 0, 0, ratio, 0, 0);
+    stars = Array.from({length: Math.ceil((window.innerWidth * window.innerHeight) / 18000)}, () => ({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      radius: Math.random() * 0.8 + 0.25,
+      opacity: Math.random() * 0.22 + 0.08,
+    }));
+    cancelAnimationFrame(frame);
+    draw();
+  }
+
+  document.addEventListener("click", (event) => {
+    if (event.target.closest("a, button, input, select, textarea")) return;
+
+    bursts.push({
+      x: event.clientX,
+      y: event.clientY,
+      createdAt: performance.now(),
+      stars: Array.from({length: 22}, () => ({
+        angle: Math.random() * Math.PI * 2,
+        distance: Math.random() * 72 + 12,
+        radius: Math.random() * 1.4 + 0.5,
+      })),
+    });
+    if (!frame) draw();
+  });
+
+  window.setInterval(() => {
+    if (document.hidden) return;
+    twinkles.push({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      radius: Math.random() * 1.2 + 0.7,
+      createdAt: performance.now(),
+    });
+    if (!frame) draw();
+  }, 1900);
+
+  window.addEventListener("resize", resize);
+  window.addEventListener("themechange", () => draw());
+  resize();
+}
+
 function applyStaticCopy() {
   const copy = localized();
   document.documentElement.lang = state.lang;
@@ -84,6 +191,10 @@ function renderPortfolio() {
         <p>${escapeHtml(principle.text)}</p>
       </article>
     `).join("");
+
+  document.getElementById("story").innerHTML = copy.about.story
+    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+    .join("");
 
   document.getElementById("projects-grid").innerHTML = profile.projects
     .map((project, index) => {
@@ -148,7 +259,41 @@ function renderPortfolio() {
     {dateStyle: "long"},
   ).format(new Date(`${profile.updated}T12:00:00Z`));
 
+  fitProjectTitles();
   activateReveal();
+}
+
+function fitProjectTitle(card, width) {
+  const title = card.querySelector("h3");
+  if (!title) return;
+
+  const availableWidth = width - 56;
+  const lineLimit = 2;
+  let size = 54;
+
+  while (size > 32) {
+    const prepared = prepare(title.textContent, `700 ${size}px Manrope`, {
+      letterSpacing: -0.06 * size,
+    });
+    if (layout(prepared, availableWidth, size).lineCount <= lineLimit) break;
+    size -= 1;
+  }
+
+  title.style.setProperty("--project-title-size", `${size}px`);
+}
+
+async function fitProjectTitles() {
+  await document.fonts.ready;
+  projectTitleObserver?.disconnect();
+  if (!("ResizeObserver" in window)) return;
+
+  setLocale(state.lang === "es" ? "es-AR" : "en-US");
+  projectTitleObserver = new ResizeObserver((entries) => {
+    entries.forEach((entry) => fitProjectTitle(entry.target, entry.contentRect.width));
+  });
+  document.querySelectorAll(".project-card").forEach((card) => {
+    projectTitleObserver.observe(card);
+  });
 }
 
 function renderCv() {
@@ -266,6 +411,7 @@ function setupControls() {
     const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     document.documentElement.dataset.theme = next;
     localStorage.setItem("portfolio-theme", next);
+    window.dispatchEvent(new Event("themechange"));
   });
 
   const menu = document.getElementById("main-nav");
@@ -287,6 +433,7 @@ async function init() {
     state.profile = await response.json();
     state.lang = preferredLanguage();
     setupControls();
+    initStarfield();
     render();
   } catch (error) {
     console.error(error);

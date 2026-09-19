@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
-  <meta name="theme-color" content="#101311">
+  <meta name="theme-color" content="#070b1f">
   <meta name="description" content="Portafolio de Facundo Munhó">
   <title>Facundo Munhó · Portfolio</title>
   <link rel="canonical" href="https://munhof.com.ar/">
@@ -17,6 +17,7 @@
 <body data-page="portfolio">
   <a class="skip-link" href="#main">Saltar al contenido</a>
   <div class="noise" aria-hidden="true"></div>
+  <canvas class="starfield" aria-hidden="true"></canvas>
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Facundo Munhó">
@@ -46,6 +47,7 @@
     <section id="top" class="hero section-shell">
       <div class="hero-copy reveal">
         <p class="eyebrow" data-copy="hero.eyebrow"></p>
+        <p class="hero-status" data-copy="hero.status"></p>
         <h1 data-copy="hero.title"></h1>
         <p class="hero-summary" data-copy="hero.summary"></p>
         <div class="hero-actions">
@@ -57,15 +59,6 @@
           <span data-copy="hero.availability"></span>
         </div>
       </div>
-      <aside class="hero-card reveal" aria-label="Professional snapshot">
-        <div class="hero-card-top">
-          <span class="mono">PROFILE / 2026</span>
-          <span class="signal" aria-hidden="true"><i></i><i></i><i></i></span>
-        </div>
-        <div class="monogram" aria-hidden="true">FM</div>
-        <p data-copy="hero.status"></p>
-        <div class="coordinate mono">BUENOS AIRES · ARGENTINA</div>
-      </aside>
     </section>
 
     <section class="stats-band" aria-label="Highlights">
@@ -79,7 +72,7 @@
       </div>
       <div class="profile-content reveal">
         <p class="lead" data-copy="about.lead"></p>
-        <p data-copy="about.body"></p>
+        <div id="story" class="story"></div>
         <div id="principles" class="principles"></div>
       </div>
     </section>
@@ -123,9 +116,11 @@
         <p class="lead" data-copy="ui.contactText"></p>
       </div>
       <div class="contact-actions">
-        <a class="button button-primary" href="mailto:facundomunho@gmail.com">facundomunho@gmail.com</a>
-        <a class="text-link" href="https://www.linkedin.com/in/facundomunho/" target="_blank" rel="noreferrer" data-copy="ui.viewLinkedin">LinkedIn</a>
-        <a class="text-link" href="https://github.com/munhof" target="_blank" rel="noreferrer" data-copy="ui.viewGithub">GitHub</a>
+        <a class="button button-primary" href="mailto:facundomunho@gmail.com?subject=Consulta%20desde%20munhof.com.ar" data-copy="ui.contactEmail">Escribirme por email</a>
+        <div class="contact-socials">
+          <a class="button button-secondary" href="https://www.linkedin.com/in/facundomunho/" target="_blank" rel="noreferrer" data-copy="ui.viewLinkedin">LinkedIn</a>
+          <a class="button button-secondary" href="https://github.com/munhof" target="_blank" rel="noreferrer" data-copy="ui.viewGithub">GitHub</a>
+        </div>
       </div>
     </section>
   </main>
@@ -135,6 +130,6 @@
     <p class="mono"><span data-copy="ui.sourceNote"></span> · <span data-copy="ui.updated"></span>: <time id="updated"></time></p>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

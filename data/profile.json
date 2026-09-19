@@ -124,6 +124,7 @@
         "present": "actualidad",
         "contactCta": "Hablemos",
         "contactText": "¿Tenés un problema de datos, modelado o software que valga la pena resolver?",
+        "contactEmail": "Escribirme por email",
         "updated": "Información actualizada",
         "sourceNote": "La web y ambos CV se generan desde la misma fuente de datos.",
         "rights": "Todos los derechos reservados.",
@@ -143,9 +144,12 @@
         "availability": "Abierto a proyectos de datos, software e investigación"
       },
       "about": {
-        "title": "Modelado con criterio de producto",
-        "lead": "Mi trabajo conecta el análisis riguroso con sistemas que otras personas pueden ejecutar, revisar y mantener.",
-        "body": "Me especializo en pipelines reproducibles, modelos de aprendizaje automático, APIs y automatización. Mi tesis extendió RAINSTORM para categorizar comportamiento animal sin supervisión y dio origen a STORM, un framework orientado a la trazabilidad y reutilización de modelos.",
+        "title": "Quién soy",
+        "lead": "Me mueve entender problemas complejos y convertirlos en herramientas que sean claras, útiles y duraderas.",
+        "story": [
+          "Mi recorrido no fue lineal: la formación técnica me acercó a los sistemas reales, la física me enseñó a modelar con rigor y la ciencia de datos me dio el lenguaje para unir esas dos formas de pensar.",
+          "Disfruto trabajar donde la investigación y el software se encuentran. Me importa hacer preguntas antes de elegir una solución, dejar los procesos mejor documentados de lo que los encontré y construir cosas que otras personas puedan comprender, revisar y continuar."
+        ],
         "principles": [
           {"title": "Reproducible", "text": "Datos, configuración, métricas y artefactos con una historia verificable."},
           {"title": "Interdisciplinario", "text": "Matemática, software y conocimiento del dominio en la misma conversación."},
@@ -153,7 +157,7 @@
         ]
       },
       "stats": [
-        {"value": "10/10", "label": "Tesis de licenciatura"},
+        {"value": "3", "label": "Proyectos destacados"},
         {"value": "2026", "label": "Egreso en Ciencia de Datos"},
         {"value": "ES / EN", "label": "Portafolio y CV sincronizados"}
       ],
@@ -225,7 +229,7 @@
         "data-science": {
           "degree": "Licenciatura en Ciencias de Datos",
           "status": "Carrera finalizada en agosto de 2026; título en trámite.",
-          "details": "Tesis: Categorización no supervisada de patrones de comportamiento animal mediante redes neuronales profundas. Calificación: 10/10."
+          "details": "Tesis: Categorización no supervisada de patrones de comportamiento animal mediante redes neuronales profundas."
         },
         "physics": {
           "degree": "Licenciatura en Ciencias Físicas · estudios parciales",
@@ -280,6 +284,7 @@
         "present": "present",
         "contactCta": "Let's talk",
         "contactText": "Have a data, modeling or software problem worth solving?",
+        "contactEmail": "Email me",
         "updated": "Information updated",
         "sourceNote": "The website and both résumés are generated from the same data source.",
         "rights": "All rights reserved.",
@@ -299,9 +304,12 @@
         "availability": "Open to data, software and research projects"
       },
       "about": {
-        "title": "Modeling with a product mindset",
-        "lead": "My work connects rigorous analysis with systems that other people can run, review and maintain.",
-        "body": "I specialize in reproducible pipelines, machine-learning models, APIs and automation. My thesis extended RAINSTORM for unsupervised animal behavior categorization and led to STORM, a framework focused on model traceability and reuse.",
+        "title": "Who I am",
+        "lead": "I am driven by understanding complex problems and turning them into tools that are clear, useful and built to last.",
+        "story": [
+          "My path has not been linear: technical training brought me close to real systems, physics taught me to model with rigor, and data science gave me the language to connect those two ways of thinking.",
+          "I enjoy working where research and software meet. I care about asking questions before choosing a solution, leaving processes better documented than I found them, and building things that other people can understand, review and carry forward."
+        ],
         "principles": [
           {"title": "Reproducible", "text": "Data, configuration, metrics and artifacts with a verifiable history."},
           {"title": "Interdisciplinary", "text": "Mathematics, software and domain knowledge in the same conversation."},
@@ -309,7 +317,7 @@
         ]
       },
       "stats": [
-        {"value": "10/10", "label": "Undergraduate thesis"},
+        {"value": "3", "label": "Featured projects"},
         {"value": "2026", "label": "Data Science graduation"},
         {"value": "ES / EN", "label": "Synchronized portfolio and résumés"}
       ],
@@ -381,7 +389,7 @@
         "data-science": {
           "degree": "Licentiate in Data Science",
           "status": "All degree requirements completed in August 2026; diploma issuance in progress.",
-          "details": "Thesis: Unsupervised Categorization of Animal Behavior Patterns Using Deep Neural Networks. Grade: 10/10."
+          "details": "Thesis: Unsupervised Categorization of Animal Behavior Patterns Using Deep Neural Networks."
         },
         "physics": {
           "degree": "Licentiate in Physical Sciences · partial studies",
