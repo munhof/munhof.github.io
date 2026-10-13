@@ -1,0 +1,6 @@
+.cloudflare/
+.wrangler/
+.dev.vars
+.env
+node_modules/
+__pycache__/

@@ -958,3 +958,32 @@ button {
     text-decoration: none;
   }
 }
+
+.contact-form {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  text-align: left;
+}
+.contact-form label { font-weight: 600; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+}
+.contact-form textarea { resize: vertical; }
+.contact-form :is(input, select, textarea):focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 3px;
+}
+.contact-form button:disabled { opacity: .55; cursor: not-allowed; }
+.contact-note, #contact-status { margin: 4px 0; font-size: 13px; color: var(--muted); }
+.contact-actions { min-width: 0; }

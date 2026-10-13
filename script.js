@@ -1,3 +1,4 @@
+import { initContactForm } from "./contact.js";
 import { layout, prepare, setLocale } from "https://esm.sh/@chenglou/pretext@0.0.3";
 
 const state = {
@@ -429,6 +430,7 @@ async function init() {
     setupControls();
     initStarfield();
     render();
+    initContactForm();
   } catch (error) {
     console.error(error);
     document.body.classList.add("load-error");

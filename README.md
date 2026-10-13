@@ -41,3 +41,30 @@ generan siempre a partir de la misma información publicada.
 
 No se cargan repositorios automáticamente. Los proyectos destacados se eligen
 en `data/profile.json` para mantener una narrativa profesional consistente.
+
+## Formulario de contacto (Cloudflare Pages)
+
+El formulario ES/EN envía a `contact@munhof.com.ar`. La Function
+`functions/api/contact.js` valida los datos y Turnstile antes de enviar mediante
+Resend; el email del visitante se usa como Reply-To. No almacena consultas.
+Un envío aceptado por el proveedor no garantiza entrega en bandeja de entrada.
+
+Configurar en el proyecto Pages, para cada entorno que deba enviar:
+
+- `TURNSTILE_SITE_KEY`: clave pública del widget, con los dominios del sitio autorizados.
+- `TURNSTILE_SECRET_KEY`: secreto de validación del mismo widget.
+- `RESEND_API_KEY`: secreto de Resend con permiso de envío para el dominio verificado.
+- `CONTACT_FROM`: remitente autorizado, por ejemplo `Portfolio <website@munhof.com.ar>`.
+
+Verificar el dominio de envío en Resend siguiendo sus registros DNS; conservar
+los MX de recepción de Zoho. No colocar secretos en archivos públicos ni Git.
+Redeployar Pages después de configurar variables. No se requiere npm build.
+GitHub Pages y `python -m http.server` no ejecutan Functions: el formulario queda
+inhabilitado y ofrece el enlace de email. Sin credenciales también falla cerrado.
+
+Validación local: `node --test tests/contact.test.mjs`,
+`python3 -B -m unittest discover -s tests`, `python3 scripts/validate_profile.py`,
+`node --check script.js` y `node --check contact.js`.
+Las pruebas usan servicios simulados y no mandan correos. Antes de publicar,
+probar ES/EN en móvil y escritorio, Turnstile, fallos de conexión y un envío real
+con respuesta desde Zoho. Verificar que el mensaje conserva el Reply-To correcto.

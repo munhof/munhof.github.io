@@ -112,7 +112,26 @@
         <p class="lead" data-copy="ui.contactText"></p>
       </div>
       <div class="contact-actions">
-        <a class="button button-primary" href="mailto:facundomunho@gmail.com?subject=Consulta%20desde%20munhof.com.ar" data-copy="ui.contactEmail">Escribirme por email</a>
+        <form id="contact-form" class="contact-form" action="/api/contact" method="post">
+          <label for="contact-name" data-copy="contactForm.name">Nombre</label>
+          <input id="contact-name" name="name" autocomplete="name" maxlength="100" required>
+          <label for="contact-email" data-copy="contactForm.email">Email</label>
+          <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+          <label for="contact-topic" data-copy="contactForm.topic">Motivo</label>
+          <select id="contact-topic" name="topic" required>
+            <option value="work" data-copy="contactForm.work">Trabajo</option>
+            <option value="collaboration" data-copy="contactForm.collaboration">Colaboración</option>
+            <option value="research" data-copy="contactForm.research">Investigación / docencia</option>
+            <option value="other" data-copy="contactForm.other">Otro</option>
+          </select>
+          <label for="contact-message" data-copy="contactForm.message">Mensaje</label>
+          <textarea id="contact-message" name="message" rows="6" maxlength="5000" required></textarea>
+          <p class="contact-note" data-copy="contactForm.note">Usaré tus datos para responder a tu consulta.</p>
+          <div id="contact-verification"></div>
+          <button class="button button-primary" type="submit" disabled data-copy="contactForm.send">Enviar mensaje</button>
+          <p id="contact-status" role="status" aria-live="polite"></p>
+        </form>
+        <a class="button button-primary" href="mailto:contact@munhof.com.ar?subject=Consulta%20desde%20munhof.com.ar" data-copy="ui.contactEmail">Escribirme por email</a>
         <div class="contact-socials">
           <a class="button button-secondary" href="https://www.linkedin.com/in/facundomunho/" target="_blank" rel="noreferrer" data-copy="ui.viewLinkedin">LinkedIn</a>
           <a class="button button-secondary" href="https://github.com/munhof" target="_blank" rel="noreferrer" data-copy="ui.viewGithub">GitHub</a>

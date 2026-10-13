@@ -1,9 +1,10 @@
-name: Validate portfolio data
+name: Validate portfolio and contact form
 
 on:
   pull_request:
   push:
-    branches: [main]
+    branches: [main, redesign-cv-sync-2026]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -22,4 +23,11 @@ jobs:
       - name: Validate bilingual profile
         run: python scripts/validate_profile.py
       - name: Check JavaScript syntax
-        run: node --check script.js
+        run: |
+          node --check script.js
+          node --check contact.js
+          node --check functions/api/contact.js
+      - name: Test portfolio and contact endpoint
+        run: |
+          python -B -m unittest discover -s tests
+          node --test tests/contact.test.mjs

@@ -142,6 +142,18 @@
         "projectsTeaching": "Proyectos y participación académica",
         "languages": "Idiomas"
       },
+      "contactForm": {
+        "name": "Nombre",
+        "email": "Email",
+        "topic": "Motivo",
+        "work": "Trabajo",
+        "collaboration": "Colaboración",
+        "research": "Investigación / docencia",
+        "other": "Otro",
+        "message": "Mensaje",
+        "note": "Usaré tus datos para responder a tu consulta.",
+        "send": "Enviar mensaje"
+      },
       "hero": {
         "eyebrow": "Ciencia de datos · Ingeniería de software · Investigación",
         "title": "Quiero hacer más simple la vida de quienes usan lo que desarrollo.",
@@ -305,6 +317,18 @@
         "education": "Education",
         "projectsTeaching": "Projects and academic engagement",
         "languages": "Languages"
+      },
+      "contactForm": {
+        "name": "Name",
+        "email": "Email",
+        "topic": "Reason",
+        "work": "Work",
+        "collaboration": "Collaboration",
+        "research": "Research / teaching",
+        "other": "Other",
+        "message": "Message",
+        "note": "I will use your details to respond to your inquiry.",
+        "send": "Send message"
       },
       "hero": {
         "eyebrow": "Data science · Software engineering · Research",
