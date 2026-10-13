@@ -10,6 +10,14 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class SpacePaletteTests(unittest.TestCase):
+    def test_portfolio_omits_highlights_band_and_its_renderer(self):
+        portfolio = (ROOT / "index.html").read_text(encoding="utf-8")
+        script = (ROOT / "script.js").read_text(encoding="utf-8")
+
+        self.assertNotIn('class="stats-band"', portfolio)
+        self.assertNotIn('id="stats"', portfolio)
+        self.assertNotIn('document.getElementById("stats")', script)
+
     def test_portfolio_uses_blue_violet_and_pink_accents(self):
         stylesheet = (ROOT / "style.css").read_text(encoding="utf-8")
 

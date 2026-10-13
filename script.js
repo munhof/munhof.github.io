@@ -177,12 +177,6 @@ function renderPortfolio() {
   const copy = localized();
 
   document.querySelector("[data-cv-link]").href = `cv.html?lang=${state.lang}`;
-  document.getElementById("stats").innerHTML = copy.stats.map((stat) => `
-    <div class="stat">
-      <strong>${escapeHtml(stat.value)}</strong>
-      <span>${escapeHtml(stat.label)}</span>
-    </div>
-  `).join("");
 
   document.getElementById("principles").innerHTML = copy.about.principles
     .map((principle) => `
