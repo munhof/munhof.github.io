@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-09-17",
+  "updated": "2026-10-13",
   "person": {
     "name": "Facundo Nicolás Munhó Vital",
     "shortName": "Facundo Munhó",
@@ -90,6 +90,12 @@
       "tags": ["PyTorch", "Behavior", "VAME", "Keypoint-MoSeq"]
     },
     {
+      "id": "sintonizados",
+      "name": "Sintonizados",
+      "url": "https://github.com/munhof/sintonizados",
+      "tags": ["Go", "IA", "Accessibility", "Vibeathon 2026"]
+    },
+    {
       "id": "teaching-python",
       "name": "Python · UNDelta",
       "url": "https://github.com/munhof/Python-UNDELTA",
@@ -138,32 +144,32 @@
       },
       "hero": {
         "eyebrow": "Ciencia de datos · Ingeniería de software · Investigación",
-        "title": "Convierto modelos y datos en sistemas trazables.",
-        "summary": "Científico de datos e ingeniero de software. Trabajo en la intersección entre machine learning, software reproducible y problemas científicos.",
+        "title": "Quiero hacer más simple la vida de quienes usan lo que desarrollo.",
+        "summary": "Soy Facundo, profesional del desarrollo de software y la ciencia de datos, docente del área y técnico. Aspiro a seguir creciendo como investigador y profesional de la ciencia de datos.",
         "status": "Licenciado en Ciencias de Datos · UBA",
         "availability": "Abierto a proyectos de datos, software e investigación"
       },
       "about": {
         "title": "Quién soy",
-        "lead": "Me mueve entender problemas complejos y convertirlos en herramientas que sean claras, útiles y duraderas.",
+        "lead": "Argentino, nacido en el 99. Hijo de las tecnologías y de internet.",
         "story": [
-          "Mi recorrido no fue lineal: la formación técnica me acercó a los sistemas reales, la física me enseñó a modelar con rigor y la ciencia de datos me dio el lenguaje para unir esas dos formas de pensar.",
-          "Disfruto trabajar donde la investigación y el software se encuentran. Me importa hacer preguntas antes de elegir una solución, dejar los procesos mejor documentados de lo que los encontré y construir cosas que otras personas puedan comprender, revisar y continuar."
+          "Me crié entre las canchitas de fútbol, las esquinas con amigos, los videojuegos y las historias de grandes inventorxs e investigadorxs como Tesla, Favaloro, Turing y Noether. Hoy me estoy encaminando a ser, al menos, alguien que pueda pararse sobre sus hombros.",
+          "Mi filosofía al desarrollar es hacer más simple la vida de quienes usan lo que construyo. No busco desarrollar algo revolucionario: busco hacer accesibles en uso —y, si puedo, en costo— herramientas que hoy cuesta mucho usar. Esa búsqueda toma forma en STORM y RAINSTORM, para facilitar la investigación del comportamiento con IA, y en Sintonizados, para ayudar a romper las barreras del idioma y de accesibilidad en conferencias y charlas."
         ],
         "principles": [
-          {"title": "Reproducible", "text": "Datos, configuración, métricas y artefactos con una historia verificable."},
-          {"title": "Interdisciplinario", "text": "Matemática, software y conocimiento del dominio en la misma conversación."},
-          {"title": "Transferible", "text": "Herramientas pensadas para investigación, producción y enseñanza."}
+          {"title": "Más simple de usar", "text": "Que las herramientas le faciliten la vida a quien las necesita."},
+          {"title": "Más accesible", "text": "Bajar las barreras de uso y, cuando pueda, también las de costo."},
+          {"title": "Comparable y trazable", "text": "Poder comparar resultados y entender cómo se llegó a ellos."}
         ]
       },
       "stats": [
-        {"value": "3", "label": "Proyectos destacados"},
+        {"value": "4", "label": "Proyectos destacados"},
         {"value": "2026", "label": "Egreso en Ciencia de Datos"},
         {"value": "ES / EN", "label": "Portafolio y CV sincronizados"}
       ],
       "sections": {
         "projectsEyebrow": "Trabajo seleccionado",
-        "projectsTitle": "Proyectos con una idea central: que los modelos se puedan entender y reutilizar.",
+        "projectsTitle": "Herramientas que desarrollo para hacer más fácil investigar y comunicarnos.",
         "experienceEyebrow": "Recorrido",
         "experienceTitle": "Experiencia en software, datos y docencia.",
         "educationEyebrow": "Formación",
@@ -179,11 +185,15 @@
       "projects": {
         "storm": {
           "kicker": "Framework de modelado",
-          "description": "Sistema para orquestar, evaluar y reutilizar modelos con trazabilidad. Separa el núcleo de modelado de las implementaciones específicas y mantiene la API independiente del protocolo."
+          "description": "Desarrollo STORM para que integrar y reutilizar modelos sea más sencillo. Es la base con la que busco acercar herramientas de IA a la investigación, con resultados comparables y trazabilidad."
         },
         "rainstorm": {
           "kicker": "Tesis · comportamiento animal",
-          "description": "Pipeline reproducible para cuantificación no supervisada de comportamiento a partir de pose. Integra VAME y Keypoint-MoSeq y compara representaciones de pose con contexto espacial."
+          "description": "En RAINSTORM llevo esa idea al estudio del comportamiento animal: busco que investigadores puedan usar módulos de cuantificación por IA de forma rápida, sencilla, comparable y trazable. Integra VAME y Keypoint-MoSeq."
+        },
+        "sintonizados": {
+          "kicker": "Accesibilidad · Vibeathon Nerdearla 2026",
+          "description": "A partir de la Vibeathon de Nerdearla 2026, diseñé y desarrollé Sintonizados por completo. Es un proyecto en desarrollo de transcripción y traducción en vivo con el que busco reducir las barreras del idioma y mejorar la accesibilidad en conferencias y charlas."
         },
         "teaching-python": {
           "kicker": "Docencia abierta",
@@ -298,32 +308,32 @@
       },
       "hero": {
         "eyebrow": "Data science · Software engineering · Research",
-        "title": "I turn models and data into traceable systems.",
-        "summary": "Data scientist and software engineer working at the intersection of machine learning, reproducible software and scientific problems.",
+        "title": "I want to make life simpler for the people who use what I build.",
+        "summary": "I’m Facundo, a software development and data science professional, educator and technician. I aspire to keep growing as a researcher and data science professional.",
         "status": "Licentiate in Data Science · UBA",
         "availability": "Open to data, software and research projects"
       },
       "about": {
         "title": "Who I am",
-        "lead": "I am driven by understanding complex problems and turning them into tools that are clear, useful and built to last.",
+        "lead": "Argentinian, born in 1999. A child of technology and the internet.",
         "story": [
-          "My path has not been linear: technical training brought me close to real systems, physics taught me to model with rigor, and data science gave me the language to connect those two ways of thinking.",
-          "I enjoy working where research and software meet. I care about asking questions before choosing a solution, leaving processes better documented than I found them, and building things that other people can understand, review and carry forward."
+          "I grew up around neighborhood football pitches, street corners with friends, video games and stories of great inventors and researchers like Tesla, Favaloro, Turing and Noether. Today, I’m working toward becoming, at the very least, someone who can stand on their shoulders.",
+          "My philosophy as a developer is to make life simpler for the people who use what I build. I’m not trying to create something revolutionary: I want to make tools that are difficult to use today more accessible in practice—and, when I can, in cost too. That pursuit takes shape in STORM and RAINSTORM, to make AI-based behavior research easier, and in Sintonizados, to help break down language and accessibility barriers at conferences and talks."
         ],
         "principles": [
-          {"title": "Reproducible", "text": "Data, configuration, metrics and artifacts with a verifiable history."},
-          {"title": "Interdisciplinary", "text": "Mathematics, software and domain knowledge in the same conversation."},
-          {"title": "Transferable", "text": "Tools designed for research, production and teaching."}
+          {"title": "Simpler to use", "text": "Tools that make life easier for the people who need them."},
+          {"title": "More accessible", "text": "Lowering barriers to use and, when I can, cost too."},
+          {"title": "Comparable and traceable", "text": "Being able to compare results and understand how they were reached."}
         ]
       },
       "stats": [
-        {"value": "3", "label": "Featured projects"},
+        {"value": "4", "label": "Featured projects"},
         {"value": "2026", "label": "Data Science graduation"},
         {"value": "ES / EN", "label": "Synchronized portfolio and résumés"}
       ],
       "sections": {
         "projectsEyebrow": "Selected work",
-        "projectsTitle": "Projects built around one idea: models should be understandable and reusable.",
+        "projectsTitle": "Tools I’m building to make research and communication easier.",
         "experienceEyebrow": "Path",
         "experienceTitle": "Experience across software, data and teaching.",
         "educationEyebrow": "Education",
@@ -339,11 +349,15 @@
       "projects": {
         "storm": {
           "kicker": "Modeling framework",
-          "description": "A system for orchestrating, evaluating and reusing traceable models. It separates the modeling core from specific implementations and keeps its API independent from transport protocols."
+          "description": "I’m developing STORM to make models easier to integrate and reuse. It is the foundation for my effort to bring AI tools to research, with comparable results and traceability."
         },
         "rainstorm": {
           "kicker": "Thesis · animal behavior",
-          "description": "A reproducible pipeline for unsupervised behavior quantification from pose data. It integrates VAME and Keypoint-MoSeq and compares pose-only representations with spatial context."
+          "description": "In RAINSTORM, I bring that idea to animal behavior research: helping researchers use AI-based quantification modules quickly and easily, with comparable, traceable results. It integrates VAME and Keypoint-MoSeq."
+        },
+        "sintonizados": {
+          "kicker": "Accessibility · Nerdearla Vibeathon 2026",
+          "description": "Starting at the Nerdearla Vibeathon 2026, I designed and developed all of Sintonizados. It is an ongoing live transcription and translation project through which I aim to reduce language barriers and improve accessibility at conferences and talks."
         },
         "teaching-python": {
           "kicker": "Open teaching",
