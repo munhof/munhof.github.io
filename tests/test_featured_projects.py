@@ -30,9 +30,14 @@ class FeaturedProjectsTests(unittest.TestCase):
         script = (root / "script.js").read_text()
         self.assertIn("copy.cv.sintonizados", script)
 
-    def test_cv_lists_san_participation_without_assuming_a_presentation(self):
+    def test_cv_links_san_poster_and_describes_the_presentation(self):
         root = Path(__file__).resolve().parents[1]
         profile = json.loads((root / "data/profile.json").read_text())
+        url = "https://csan2026.saneurociencias.org.ar/poster/unsupervised-categorization-of-animal-behavioral-patterns-using-deep-neural-networks/"
         for language in ("es", "en"):
             bullets = profile["i18n"][language]["cv"]["projectBullets"]
-            self.assertTrue(any("SAN 2026" in text for text in bullets))
+            poster = next((item for item in bullets if isinstance(item, dict) and item.get("url") == url), None)
+            self.assertIsNotNone(poster)
+            self.assertIn("SAN 2026", poster["text"])
+            self.assertIn("STORM", poster["text"])
+            self.assertTrue(poster["label"])

@@ -339,7 +339,9 @@ function renderCv() {
 
   const sintonizados = profile.projects.find((project) => project.id === "sintonizados");
   document.getElementById("cv-projects").innerHTML = copy.cv.projectBullets
-    .map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join("")
+    .map((bullet) => typeof bullet === "string"
+      ? `<li>${escapeHtml(bullet)}</li>`
+      : `<li>${escapeHtml(bullet.text)} <a href="${escapeHtml(bullet.url)}">${escapeHtml(bullet.label)}</a></li>`).join("")
     + `<li>${escapeHtml(copy.cv.sintonizados)} <a href="${escapeHtml(sintonizados.url)}">github.com/munhof/sintonizados</a></li>`;
   document.getElementById("cv-languages").textContent = profile.languages
     .map((language) => copy.languages[language]).join(" · ");
