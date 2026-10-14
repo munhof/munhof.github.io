@@ -10,6 +10,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class SpacePaletteTests(unittest.TestCase):
+    def test_contact_heading_aligns_with_top_of_form(self):
+        stylesheet = (ROOT / "style.css").read_text(encoding="utf-8")
+        rules = re.search(r"\.contact \{(.*?)\n\}", stylesheet, re.DOTALL).group(1)
+        self.assertIn("align-items: start;", rules)
+        self.assertIn("grid-template-columns: repeat(2, minmax(0, 1fr));", rules)
+
     def test_portfolio_omits_highlights_band_and_its_renderer(self):
         portfolio = (ROOT / "index.html").read_text(encoding="utf-8")
         script = (ROOT / "script.js").read_text(encoding="utf-8")

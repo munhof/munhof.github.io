@@ -1,9 +1,12 @@
+import { sendSmtp } from '../../lib/smtp.js';
+const smtpReady = (env) => Boolean(env.SMTP_HOST && String(env.SMTP_PORT) === '465' && env.SMTP_USER && env.SMTP_PASSWORD && env.CONTACT_FROM);
 const reply = (status, error) => Response.json(error ? { error } : { ok: true }, { status, headers: { 'Cache-Control': 'no-store' } });
-export async function onRequestPost({ request, env }) {
+export function onRequestPost(context) { return handleContactPost(context); }
+export async function handleContactPost({ request, env }, send = sendSmtp) {
   const origin = new URL(request.url);
   if (request.headers.get('Origin') !== origin.origin) return reply(403, 'origin');
   if (!request.headers.get('Content-Type')?.startsWith('application/json')) return reply(415, 'format');
-  if (!env.RESEND_API_KEY || !env.CONTACT_FROM || !env.TURNSTILE_SECRET_KEY) return reply(503, 'unavailable');
+  if (!smtpReady(env) || !env.TURNSTILE_SECRET_KEY) return reply(503, 'unavailable');
   let body;
   try {
     const reader = request.body.getReader();
@@ -33,18 +36,16 @@ export async function onRequestPost({ request, env }) {
     if (!verification.ok) return reply(502, 'verification');
     const result = await verification.json();
     if (!result.success || result.hostname !== origin.hostname || result.action !== 'contact') return reply(403, 'verification');
-    const sent = await fetch('https://api.resend.com/emails', {
-      method: 'POST', signal: AbortSignal.timeout(10000),
-      headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ from: env.CONTACT_FROM, to: ['contact@munhof.com.ar'], reply_to: email,
-        subject: `[Portfolio / ${topic}] ${name.trim()}`,
-        text: `Name: ${name.trim()}\nEmail: ${email}\nTopic: ${topic}\n\n${message.trim()}` }),
+    await send({ host: env.SMTP_HOST, port: Number(env.SMTP_PORT), user: env.SMTP_USER,
+      password: env.SMTP_PASSWORD, from: env.CONTACT_FROM }, {
+      to: 'contact@munhof.com.ar', replyTo: email,
+      subject: `[Portfolio / ${topic}] ${name.trim()}`,
+      text: `Name: ${name.trim()}\nEmail: ${email}\nTopic: ${topic}\n\n${message.trim()}`,
     });
-    if (!sent.ok || !(await sent.json()).id) return reply(502, 'delivery');
     return reply(200);
   } catch { return reply(502, 'unavailable'); }
 }
 export function onRequestGet({ env }) {
-  const ready = Boolean(env.TURNSTILE_SITE_KEY && env.TURNSTILE_SECRET_KEY && env.RESEND_API_KEY && env.CONTACT_FROM);
+  const ready = Boolean(env.TURNSTILE_SITE_KEY && env.TURNSTILE_SECRET_KEY && smtpReady(env));
   return Response.json({ siteKey: ready ? env.TURNSTILE_SITE_KEY : null }, { headers: { 'Cache-Control': 'no-store' } });
 }

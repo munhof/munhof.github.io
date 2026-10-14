@@ -27,7 +27,8 @@ jobs:
           node --check script.js
           node --check contact.js
           node --check functions/api/contact.js
+          node --check lib/smtp.js
       - name: Test portfolio and contact endpoint
         run: |
           python -B -m unittest discover -s tests
-          node --test tests/contact.test.mjs
+          node --test tests/*.test.mjs
