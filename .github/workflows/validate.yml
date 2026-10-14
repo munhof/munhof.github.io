@@ -1,0 +1,34 @@
+name: Validate portfolio and contact form
+
+on:
+  pull_request:
+  push:
+    branches: [main, redesign-cv-sync-2026]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate bilingual profile
+        run: python scripts/validate_profile.py
+      - name: Check JavaScript syntax
+        run: |
+          node --check script.js
+          node --check contact.js
+          node --check functions/api/contact.js
+          node --check lib/smtp.js
+      - name: Test portfolio and contact endpoint
+        run: |
+          python -B -m unittest discover -s tests
+          node --test tests/*.test.mjs

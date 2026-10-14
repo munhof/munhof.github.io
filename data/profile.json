@@ -1,0 +1,472 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-10-13",
+  "person": {
+    "name": "Facundo Nicolás Munhó Vital",
+    "shortName": "Facundo Munhó",
+    "location": "General Pacheco, Buenos Aires, Argentina",
+    "email": "facundomunho@gmail.com",
+    "links": {
+      "website": "https://munhof.com.ar",
+      "github": "https://github.com/munhof",
+      "linkedin": "https://www.linkedin.com/in/facundomunho/"
+    }
+  },
+  "skills": [
+    {
+      "id": "data",
+      "items": ["Python", "Pandas", "NumPy", "SciPy", "scikit-learn", "PyTorch", "R", "Jupyter"]
+    },
+    {
+      "id": "software",
+      "items": ["REST APIs", "SQL", "Dart", "Flutter", "Bash", "C++", "Java", "Kotlin"]
+    },
+    {
+      "id": "platform",
+      "items": ["Podman", "Docker", "CI/CD", "GitHub Actions", "Git", "IaC"]
+    }
+  ],
+  "experience": [
+    {
+      "id": "undelta",
+      "organization": "Universidad Nacional del Delta",
+      "location": "Buenos Aires, Argentina",
+      "start": "2026-08",
+      "end": null
+    },
+    {
+      "id": "apexar",
+      "organization": "Apexar Technologies S.A.",
+      "location": "Buenos Aires, Argentina",
+      "start": "2024-10",
+      "end": null
+    },
+    {
+      "id": "uba",
+      "organization": "Universidad de Buenos Aires · FCEyN",
+      "location": "Buenos Aires, Argentina",
+      "start": "2024-01",
+      "end": "2024-10"
+    },
+    {
+      "id": "crytical",
+      "organization": "Crytical Systems S.R.L.",
+      "location": "Buenos Aires, Argentina",
+      "start": "2019-02",
+      "end": "2022-08"
+    }
+  ],
+  "education": [
+    {
+      "id": "data-science",
+      "institution": "Universidad de Buenos Aires · FCEyN",
+      "start": "2022",
+      "end": "2026"
+    },
+    {
+      "id": "physics",
+      "institution": "Universidad de Buenos Aires · FCEyN",
+      "start": "2019",
+      "end": "2023"
+    },
+    {
+      "id": "technician",
+      "institution": "Instituto Juan Segundo Fernández",
+      "start": "2011",
+      "end": "2018"
+    }
+  ],
+  "projects": [
+    {
+      "id": "storm",
+      "name": "STORM",
+      "url": "https://github.com/munhof/STORM",
+      "tags": ["Python", "MLOps", "Reproducibility", "APIs"]
+    },
+    {
+      "id": "rainstorm",
+      "name": "RAINSTORM",
+      "url": "https://github.com/munhof/RAINSTORM",
+      "tags": ["PyTorch", "Behavior", "VAME", "Keypoint-MoSeq"]
+    },
+    {
+      "id": "sintonizados",
+      "name": "Sintonizados",
+      "url": "https://github.com/munhof/sintonizados",
+      "tags": ["Go", "IA", "Accessibility", "Vibeathon 2026"]
+    },
+    {
+      "id": "teaching-python",
+      "name": "Python · UNDelta",
+      "url": "https://github.com/munhof/Python-UNDELTA",
+      "tags": ["Python", "Teaching", "Data Science"]
+    }
+  ],
+  "languages": ["spanish", "english", "portuguese", "german"],
+  "i18n": {
+    "es": {
+      "meta": {
+        "title": "Facundo Munhó · Ciencia de Datos e Ingeniería de Software",
+        "description": "Portafolio de Facundo Munhó: ciencia de datos, machine learning, ingeniería de software, investigación y docencia."
+      },
+      "ui": {
+        "navAbout": "Perfil",
+        "navProjects": "Proyectos",
+        "navExperience": "Experiencia",
+        "navEducation": "Formación",
+        "navContact": "Contacto",
+        "skip": "Saltar al contenido",
+        "menu": "Abrir menú",
+        "theme": "Cambiar tema",
+        "language": "Idioma",
+        "viewProject": "Ver proyecto",
+        "viewGithub": "GitHub",
+        "viewLinkedin": "LinkedIn",
+        "openCv": "Ver CV",
+        "cvSpanish": "CV en español",
+        "cvEnglish": "CV en inglés",
+        "printCv": "Guardar como PDF",
+        "backPortfolio": "Volver al portafolio",
+        "present": "actualidad",
+        "contactCta": "Hablemos",
+        "contactText": "¿Tenés un problema de datos, modelado o software que valga la pena resolver?",
+        "contactEmail": "Escribirme por email",
+        "updated": "Información actualizada",
+        "sourceNote": "La web y ambos CV se generan desde la misma fuente de datos.",
+        "rights": "Todos los derechos reservados.",
+        "cvTitle": "Currículum vitae",
+        "professionalSummary": "Resumen profesional",
+        "technicalSkills": "Habilidades técnicas",
+        "workExperience": "Experiencia laboral",
+        "education": "Formación",
+        "projectsTeaching": "Proyectos y participación académica",
+        "languages": "Idiomas"
+      },
+      "contactForm": {
+        "name": "Nombre",
+        "email": "Email",
+        "topic": "Motivo",
+        "work": "Trabajo",
+        "collaboration": "Colaboración",
+        "research": "Investigación / docencia",
+        "other": "Otro",
+        "message": "Mensaje",
+        "note": "Usaré tus datos para responder a tu consulta.",
+        "send": "Enviar mensaje"
+      },
+      "hero": {
+        "eyebrow": "Ciencia de datos · Ingeniería de software · Investigación",
+        "title": "Quiero hacer más simple la vida de quienes usan lo que desarrollo.",
+        "summary": "Soy Facundo, profesional del desarrollo de software y la ciencia de datos, docente del área y técnico. Aspiro a seguir creciendo como investigador y profesional de la ciencia de datos.",
+        "status": "Licenciado en Ciencias de Datos · UBA",
+        "availability": "Abierto a proyectos de datos, software e investigación"
+      },
+      "about": {
+        "title": "Quién soy",
+        "lead": "Argentino, nacido en el 99. Hijo de las tecnologías y de internet.",
+        "story": [
+          "Me crié entre las canchitas de fútbol, las esquinas con amigos, los videojuegos y las historias de grandes inventorxs e investigadorxs como Tesla, Favaloro, Turing y Noether. Hoy me estoy encaminando a ser, al menos, alguien que pueda pararse sobre sus hombros.",
+          "Mi filosofía al desarrollar es hacer más simple la vida de quienes usan lo que construyo. No busco desarrollar algo revolucionario: busco hacer accesibles en uso —y, si puedo, en costo— herramientas que hoy cuesta mucho usar. Esa búsqueda toma forma en STORM y RAINSTORM, para facilitar la investigación del comportamiento con IA, y en Sintonizados, para ayudar a romper las barreras del idioma y de accesibilidad en conferencias y charlas."
+        ],
+        "principles": [
+          {"title": "Más simple de usar", "text": "Que las herramientas le faciliten la vida a quien las necesita."},
+          {"title": "Más accesible", "text": "Bajar las barreras de uso y, cuando pueda, también las de costo."},
+          {"title": "Comparable y trazable", "text": "Poder comparar resultados y entender cómo se llegó a ellos."}
+        ]
+      },
+      "stats": [
+        {"value": "4", "label": "Proyectos destacados"},
+        {"value": "2026", "label": "Egreso en Ciencia de Datos"},
+        {"value": "ES / EN", "label": "Portafolio y CV sincronizados"}
+      ],
+      "sections": {
+        "projectsEyebrow": "Trabajo seleccionado",
+        "projectsTitle": "Herramientas que desarrollo para hacer más fácil investigar y comunicarnos.",
+        "experienceEyebrow": "Recorrido",
+        "experienceTitle": "Experiencia en software, datos y docencia.",
+        "educationEyebrow": "Formación",
+        "educationTitle": "Base científica, construcción práctica.",
+        "skillsEyebrow": "Herramientas",
+        "skillsTitle": "Tecnologías que uso para llevar una idea a producción."
+      },
+      "skillGroups": {
+        "data": "Datos y modelado",
+        "software": "Desarrollo de software",
+        "platform": "Plataforma y entrega"
+      },
+      "projects": {
+        "storm": {
+          "kicker": "Framework de modelado",
+          "description": "Desarrollo STORM para que integrar y reutilizar modelos sea más sencillo. Es la base con la que busco acercar herramientas de IA a la investigación, con resultados comparables y trazabilidad."
+        },
+        "rainstorm": {
+          "kicker": "Tesis · comportamiento animal",
+          "description": "En RAINSTORM llevo esa idea al estudio del comportamiento animal: busco que investigadores puedan usar módulos de cuantificación por IA de forma rápida, sencilla, comparable y trazable. Integra VAME y Keypoint-MoSeq."
+        },
+        "sintonizados": {
+          "kicker": "Accesibilidad · Vibeathon Nerdearla 2026",
+          "description": "A partir de la Vibeathon de Nerdearla 2026, diseñé y desarrollé Sintonizados por completo. Es un proyecto en desarrollo de transcripción y traducción en vivo con el que busco reducir las barreras del idioma y mejorar la accesibilidad en conferencias y charlas."
+        },
+        "teaching-python": {
+          "kicker": "Docencia abierta",
+          "description": "Materiales y laboratorios de Python para introducir análisis de datos, visualización y aprendizaje automático desde problemas concretos."
+        }
+      },
+      "experience": {
+        "undelta": {
+          "role": "Jefe de Trabajos Prácticos · Introducción al Aprendizaje Automático",
+          "summary": "Diseño de clases prácticas, ejercicios y materiales para conectar fundamentos matemáticos con flujos reales de análisis en Python.",
+          "bullets": [
+            "Planificación de actividades sobre datos, modelos, métricas y regresión.",
+            "Desarrollo de guías reproducibles y recursos de evaluación."
+          ]
+        },
+        "apexar": {
+          "role": "Asistente de Ingeniería de Software · Área Web",
+          "summary": "Desarrollo full-stack, contratos de API y automatización de entornos reproducibles.",
+          "bullets": [
+            "Desarrollo de aplicaciones web con Dart y Flutter.",
+            "Diseño y documentación de APIs REST y servidores mock para pruebas aisladas.",
+            "Automatización de build, CI/CD y entornos contenerizados con Bash y Podman."
+          ]
+        },
+        "uba": {
+          "role": "Ayudante de Cátedra · Departamento de Matemática",
+          "summary": "Clases de álgebra, métodos numéricos y simulación con Python para cursos de hasta 150 estudiantes.",
+          "bullets": [
+            "Desarrollo de módulos de simulación con NumPy, SciPy y Matplotlib.",
+            "Acompañamiento en resolución numérica, depuración y buenas prácticas."
+          ]
+        },
+        "crytical": {
+          "role": "Técnico Electromecánico",
+          "summary": "Diseño y planificación de instalaciones eléctricas y de refrigeración industrial.",
+          "bullets": [
+            "Proyectos para infraestructura crítica de clientes como FATE y Telecom.",
+            "Coordinación de cuadrillas y cumplimiento de requisitos de seguridad."
+          ]
+        }
+      },
+      "education": {
+        "data-science": {
+          "degree": "Licenciatura en Ciencias de Datos",
+          "status": "Carrera finalizada en agosto de 2026; título en trámite.",
+          "details": "Tesis: Categorización no supervisada de patrones de comportamiento animal mediante redes neuronales profundas."
+        },
+        "physics": {
+          "degree": "Licenciatura en Ciencias Físicas · estudios parciales",
+          "status": "Formación troncal completada en cálculo, mecánica e instrumentación.",
+          "details": "Reorientación hacia Ciencia de Datos para especializarme en modelado computacional."
+        },
+        "technician": {
+          "degree": "Técnico Electromecánico",
+          "status": "Educación técnica secundaria.",
+          "details": "Formación en sistemas eléctricos, mecánicos y de refrigeración."
+        }
+      },
+      "languages": {
+        "spanish": "Español · nativo",
+        "english": "Inglés · técnico intermedio",
+        "portuguese": "Portugués · intermedio",
+        "german": "Alemán · básico"
+      },
+      "cv": {
+        "headline": "Científico de Datos e Ingeniero de Software",
+        "summary": "Científico de datos e ingeniero de software con formación en matemática, estadística y modelado computacional. Experiencia construyendo pipelines reproducibles, APIs, automatización CI/CD y herramientas que integran modelos de aprendizaje automático en sistemas mantenibles.",
+        "sintonizados": "Sintonizados (Nerdearla Vibeathon 2026): diseño y desarrollo integral de un proyecto de transcripción y traducción en vivo para mejorar la accesibilidad en charlas.",
+        "projectBullets": [
+          "Tesis de Licenciatura (2025–2026): framework reproducible para analizar datos de pose y comparar VAME y Keypoint-MoSeq en categorización no supervisada de comportamiento animal.",
+          "STORM: framework para orquestación, evaluación, trazabilidad y reutilización de modelos.",
+          "Taller de Python Científico (2025): curso intensivo para más de 20 participantes sobre adquisición de datos, procesamiento de señales y simulación con SciPy.",
+          {
+            "text": "SAN 2026: presentación de póster sobre STORM y mi tesis de categorización no supervisada del comportamiento animal mediante redes neuronales profundas.",
+            "url": "https://csan2026.saneurociencias.org.ar/poster/unsupervised-categorization-of-animal-behavioral-patterns-using-deep-neural-networks/",
+            "label": "Ver póster"
+          }
+        ]
+      }
+    },
+    "en": {
+      "meta": {
+        "title": "Facundo Munhó · Data Science & Software Engineering",
+        "description": "Facundo Munhó's portfolio: data science, machine learning, software engineering, research and teaching."
+      },
+      "ui": {
+        "navAbout": "Profile",
+        "navProjects": "Projects",
+        "navExperience": "Experience",
+        "navEducation": "Education",
+        "navContact": "Contact",
+        "skip": "Skip to content",
+        "menu": "Open menu",
+        "theme": "Switch theme",
+        "language": "Language",
+        "viewProject": "View project",
+        "viewGithub": "GitHub",
+        "viewLinkedin": "LinkedIn",
+        "openCv": "View résumé",
+        "cvSpanish": "Spanish résumé",
+        "cvEnglish": "English résumé",
+        "printCv": "Save as PDF",
+        "backPortfolio": "Back to portfolio",
+        "present": "present",
+        "contactCta": "Let's talk",
+        "contactText": "Have a data, modeling or software problem worth solving?",
+        "contactEmail": "Email me",
+        "updated": "Information updated",
+        "sourceNote": "The website and both résumés are generated from the same data source.",
+        "rights": "All rights reserved.",
+        "cvTitle": "Résumé",
+        "professionalSummary": "Professional summary",
+        "technicalSkills": "Technical skills",
+        "workExperience": "Work experience",
+        "education": "Education",
+        "projectsTeaching": "Projects and academic engagement",
+        "languages": "Languages"
+      },
+      "contactForm": {
+        "name": "Name",
+        "email": "Email",
+        "topic": "Reason",
+        "work": "Work",
+        "collaboration": "Collaboration",
+        "research": "Research / teaching",
+        "other": "Other",
+        "message": "Message",
+        "note": "I will use your details to respond to your inquiry.",
+        "send": "Send message"
+      },
+      "hero": {
+        "eyebrow": "Data science · Software engineering · Research",
+        "title": "I want to make life simpler for the people who use what I build.",
+        "summary": "I’m Facundo, a software development and data science professional, educator and technician. I aspire to keep growing as a researcher and data science professional.",
+        "status": "Licentiate in Data Science · UBA",
+        "availability": "Open to data, software and research projects"
+      },
+      "about": {
+        "title": "Who I am",
+        "lead": "Argentinian, born in 1999. A child of technology and the internet.",
+        "story": [
+          "I grew up around neighborhood football pitches, street corners with friends, video games and stories of great inventors and researchers like Tesla, Favaloro, Turing and Noether. Today, I’m working toward becoming, at the very least, someone who can stand on their shoulders.",
+          "My philosophy as a developer is to make life simpler for the people who use what I build. I’m not trying to create something revolutionary: I want to make tools that are difficult to use today more accessible in practice—and, when I can, in cost too. That pursuit takes shape in STORM and RAINSTORM, to make AI-based behavior research easier, and in Sintonizados, to help break down language and accessibility barriers at conferences and talks."
+        ],
+        "principles": [
+          {"title": "Simpler to use", "text": "Tools that make life easier for the people who need them."},
+          {"title": "More accessible", "text": "Lowering barriers to use and, when I can, cost too."},
+          {"title": "Comparable and traceable", "text": "Being able to compare results and understand how they were reached."}
+        ]
+      },
+      "stats": [
+        {"value": "4", "label": "Featured projects"},
+        {"value": "2026", "label": "Data Science graduation"},
+        {"value": "ES / EN", "label": "Synchronized portfolio and résumés"}
+      ],
+      "sections": {
+        "projectsEyebrow": "Selected work",
+        "projectsTitle": "Tools I’m building to make research and communication easier.",
+        "experienceEyebrow": "Path",
+        "experienceTitle": "Experience across software, data and teaching.",
+        "educationEyebrow": "Education",
+        "educationTitle": "Scientific foundations, practical building.",
+        "skillsEyebrow": "Toolkit",
+        "skillsTitle": "Technologies I use to take an idea into production."
+      },
+      "skillGroups": {
+        "data": "Data and modeling",
+        "software": "Software development",
+        "platform": "Platform and delivery"
+      },
+      "projects": {
+        "storm": {
+          "kicker": "Modeling framework",
+          "description": "I’m developing STORM to make models easier to integrate and reuse. It is the foundation for my effort to bring AI tools to research, with comparable results and traceability."
+        },
+        "rainstorm": {
+          "kicker": "Thesis · animal behavior",
+          "description": "In RAINSTORM, I bring that idea to animal behavior research: helping researchers use AI-based quantification modules quickly and easily, with comparable, traceable results. It integrates VAME and Keypoint-MoSeq."
+        },
+        "sintonizados": {
+          "kicker": "Accessibility · Nerdearla Vibeathon 2026",
+          "description": "Starting at the Nerdearla Vibeathon 2026, I designed and developed all of Sintonizados. It is an ongoing live transcription and translation project through which I aim to reduce language barriers and improve accessibility at conferences and talks."
+        },
+        "teaching-python": {
+          "kicker": "Open teaching",
+          "description": "Python materials and labs introducing data analysis, visualization and machine learning through concrete problems."
+        }
+      },
+      "experience": {
+        "undelta": {
+          "role": "Teaching Assistant · Introduction to Machine Learning",
+          "summary": "Designing practical classes, exercises and materials that connect mathematical foundations with real Python analysis workflows.",
+          "bullets": [
+            "Planning activities on data, models, metrics and regression.",
+            "Developing reproducible guides and assessment resources."
+          ]
+        },
+        "apexar": {
+          "role": "Software Engineering Assistant · Web Area",
+          "summary": "Full-stack development, API contracts and reproducible environment automation.",
+          "bullets": [
+            "Web application development with Dart and Flutter.",
+            "REST API design and documentation, plus mock servers for isolated testing.",
+            "Build, CI/CD and containerized-environment automation with Bash and Podman."
+          ]
+        },
+        "uba": {
+          "role": "Teaching Assistant · Department of Mathematics",
+          "summary": "Algebra, numerical methods and Python simulation classes for cohorts of up to 150 students.",
+          "bullets": [
+            "Simulation modules using NumPy, SciPy and Matplotlib.",
+            "Mentoring in numerical problem solving, debugging and good practices."
+          ]
+        },
+        "crytical": {
+          "role": "Electromechanical Technician",
+          "summary": "Design and planning of industrial electrical and refrigeration systems.",
+          "bullets": [
+            "Critical-infrastructure projects for clients including FATE and Telecom.",
+            "Field-crew coordination and safety-requirement compliance."
+          ]
+        }
+      },
+      "education": {
+        "data-science": {
+          "degree": "Licentiate in Data Science",
+          "status": "All degree requirements completed in August 2026; diploma issuance in progress.",
+          "details": "Thesis: Unsupervised Categorization of Animal Behavior Patterns Using Deep Neural Networks."
+        },
+        "physics": {
+          "degree": "Licentiate in Physical Sciences · partial studies",
+          "status": "Core coursework completed in calculus, mechanics and laboratory instrumentation.",
+          "details": "Shifted to Data Science to specialize in computational modeling."
+        },
+        "technician": {
+          "degree": "Electromechanical Technician",
+          "status": "Technical secondary education.",
+          "details": "Training in electrical, mechanical and refrigeration systems."
+        }
+      },
+      "languages": {
+        "spanish": "Spanish · native",
+        "english": "English · intermediate technical",
+        "portuguese": "Portuguese · intermediate",
+        "german": "German · basic"
+      },
+      "cv": {
+        "headline": "Data Scientist & Software Engineer",
+        "summary": "Data scientist and software engineer with a foundation in mathematics, statistics and computational modeling. Experienced in building reproducible pipelines, APIs, CI/CD automation and tools that integrate machine-learning models into maintainable systems.",
+        "sintonizados": "Sintonizados (Nerdearla Vibeathon 2026): sole designer and developer of a live transcription and translation project to improve accessibility at talks.",
+        "projectBullets": [
+          "Undergraduate thesis (2025–2026): reproducible framework for pose-data analysis and comparison of VAME and Keypoint-MoSeq for unsupervised animal behavior categorization.",
+          "STORM: framework for model orchestration, evaluation, traceability and reuse.",
+          "Scientific Python Workshop (2025): intensive course for over 20 participants on data acquisition, signal processing and physical-system simulation with SciPy.",
+          {
+            "text": "SAN 2026: poster presentation on STORM and my thesis on unsupervised categorization of animal behavioral patterns using deep neural networks.",
+            "url": "https://csan2026.saneurociencias.org.ar/poster/unsupervised-categorization-of-animal-behavioral-patterns-using-deep-neural-networks/",
+            "label": "View poster"
+          }
+        ]
+      }
+    }
+  }
+}
