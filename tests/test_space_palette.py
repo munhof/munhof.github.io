@@ -10,6 +10,16 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class SpacePaletteTests(unittest.TestCase):
+    def test_print_cv_uses_compact_spacing_without_locking_entire_sections(self):
+        stylesheet = (ROOT / "style.css").read_text(encoding="utf-8")
+        print_css = stylesheet.split("@media print {", 1)[1].split(".contact-form", 1)[0]
+        section = re.search(r"\.cv-section \{(.*?)\n  \}", print_css, re.DOTALL).group(1)
+        self.assertIn("break-inside: auto;", section)
+        self.assertIn("margin-top: 12px;", section)
+        self.assertIn(".cv-entry h3", print_css)
+        self.assertIn(".cv-skills strong", print_css)
+        self.assertIn("min-height: 0;", print_css)
+
     def test_contact_heading_aligns_with_top_of_form(self):
         stylesheet = (ROOT / "style.css").read_text(encoding="utf-8")
         rules = re.search(r"\.contact \{(.*?)\n\}", stylesheet, re.DOTALL).group(1)
