@@ -10,15 +10,22 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class SpacePaletteTests(unittest.TestCase):
-    def test_print_cv_uses_compact_spacing_without_locking_entire_sections(self):
+    def test_cv_screen_and_print_share_a4_geometry_and_typography(self):
         stylesheet = (ROOT / "style.css").read_text(encoding="utf-8")
-        print_css = stylesheet.split("@media print {", 1)[1].split(".contact-form", 1)[0]
-        section = re.search(r"\.cv-section \{(.*?)\n  \}", print_css, re.DOTALL).group(1)
-        self.assertIn("break-inside: auto;", section)
-        self.assertIn("margin-top: 12px;", section)
-        self.assertIn(".cv-entry h3", print_css)
-        self.assertIn(".cv-skills strong", print_css)
-        self.assertIn("min-height: 0;", print_css)
+        shared, printing = stylesheet.split("@media print {", 1)
+        printing = printing.split(".contact-form", 1)[0]
+        document = re.search(r"\.cv-document \{(.*?)\n\}", shared, re.DOTALL).group(1)
+        self.assertIn("width: 210mm;", document)
+        self.assertIn("min-height: 297mm;", document)
+        self.assertIn("padding: 10mm 12mm;", document)
+        self.assertIn("margin: 0;", printing)
+        self.assertNotIn("font-size:", printing)
+        self.assertNotIn("line-height:", printing)
+        self.assertNotIn(".cv-header", printing)
+        self.assertNotIn(".cv-section", printing)
+        mobile = shared.split("@media (max-width: 720px)", 1)[1]
+        self.assertNotIn(".cv-document", mobile)
+        self.assertNotIn(".cv-header", mobile)
 
     def test_contact_heading_aligns_with_top_of_form(self):
         stylesheet = (ROOT / "style.css").read_text(encoding="utf-8")

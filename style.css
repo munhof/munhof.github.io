@@ -639,10 +639,22 @@ button {
   backdrop-filter: blur(16px);
 }
 
+/* The sheet uses identical physical dimensions on screen and paper.
+   Narrow screens scroll the preview rather than reflowing its contents. */
+.cv-preview {
+  overflow-x: auto;
+  padding: 38px 15px 80px;
+}
+
 .cv-document {
-  width: min(calc(100% - 30px), 900px);
-  margin: 38px auto 80px;
-  padding: 54px 62px;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 10mm 12mm;
+  font-size: 10.5px;
+  line-height: 1.35;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
   background: #fff;
   box-shadow: 0 25px 70px rgba(38, 27, 86, 0.13);
 }
@@ -650,28 +662,33 @@ button {
 .cv-header {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 30px;
-  padding-bottom: 24px;
+  gap: 18px;
+  padding-bottom: 12px;
   border-bottom: 3px solid #33246f;
 }
 
 .cv-header h1 {
   margin: 0;
-  font-size: 37px;
+  font-size: 28px;
   letter-spacing: -0.04em;
   line-height: 1;
 }
 
+.cv-header .eyebrow {
+  margin: 0 0 8px;
+}
+
 .cv-headline {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
+  font-size: 12px;
   color: #5d43a5;
   font-weight: 700;
 }
 
 .cv-contact {
   text-align: right;
-  font-size: 11px;
-  line-height: 1.75;
+  font-size: 9px;
+  line-height: 1.5;
 }
 
 .cv-contact a {
@@ -679,32 +696,42 @@ button {
 }
 
 .cv-section {
-  margin-top: 25px;
+  margin-top: 12px;
+  break-inside: auto;
 }
 
 .cv-section h2 {
-  margin: 0 0 10px;
+  margin: 0 0 6px;
+  break-after: avoid;
   color: #49318f;
-  font: 700 13px/1.2 "Manrope", sans-serif;
+  font: 700 11px/1.2 "Manrope", sans-serif;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .cv-section p,
 .cv-section li {
-  font-size: 11.5px;
-  line-height: 1.55;
+  font-size: 9.5px;
+  line-height: 1.4;
+}
+
+.cv-section p {
+  margin: 0;
+}
+
+.cv-section li {
+  break-inside: avoid;
 }
 
 .cv-section ul {
-  margin: 7px 0 0;
+  margin: 4px 0 0;
   padding-left: 19px;
 }
 
 .cv-skills {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
 }
 
 .cv-skills p {
@@ -714,18 +741,22 @@ button {
 .cv-entry {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 4px 20px;
-  margin-top: 16px;
+  gap: 3px 16px;
+  margin-top: 8px;
+  break-inside: avoid;
 }
 
+.cv-skills strong,
 .cv-entry h3 {
   margin: 0;
-  font-size: 13px;
+  font-size: 11px;
+  line-height: 1.3;
 }
 
 .cv-entry .meta {
   color: #64608a;
-  font-size: 10.5px;
+  font-size: 9.5px;
+  line-height: 1.35;
 }
 
 .cv-entry ul,
@@ -876,19 +907,7 @@ button {
     flex-wrap: wrap;
   }
 
-  .cv-document {
-    margin-top: 0;
-    padding: 32px 25px;
-  }
 
-  .cv-header,
-  .cv-skills {
-    grid-template-columns: 1fr;
-  }
-
-  .cv-contact {
-    text-align: left;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -912,7 +931,7 @@ button {
 @media print {
   @page {
     size: A4;
-    margin: 10mm 12mm;
+    margin: 0;
   }
 
   .no-print {
@@ -922,98 +941,16 @@ button {
   .cv-page {
     min-height: 0;
     background: #fff;
-    font-size: 10.5px;
-    line-height: 1.35;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
+  }
+
+  .cv-preview {
+    padding: 0;
+    overflow: visible;
   }
 
   .cv-document {
-    width: auto;
     margin: 0;
-    padding: 0;
     box-shadow: none;
-  }
-
-  .cv-header h1 {
-    font-size: 28px;
-  }
-
-  .cv-header {
-    grid-template-columns: 1fr auto;
-    gap: 18px;
-    padding-bottom: 12px;
-  }
-
-  .cv-header .eyebrow {
-    margin: 0 0 8px;
-  }
-
-  .cv-headline {
-    margin-top: 8px;
-    font-size: 12px;
-  }
-
-  .cv-contact {
-    text-align: right;
-    font-size: 9px;
-    line-height: 1.5;
-  }
-
-  .cv-skills {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .cv-skills strong,
-  .cv-entry h3 {
-    font-size: 11px;
-    line-height: 1.3;
-  }
-
-  .cv-entry .meta {
-    font-size: 9.5px;
-    line-height: 1.35;
-  }
-
-  .cv-section {
-    margin-top: 12px;
-    break-inside: auto;
-  }
-
-  .cv-entry {
-    margin-top: 8px;
-    gap: 3px 16px;
-    break-inside: avoid;
-  }
-
-  .cv-section p,
-  .cv-section li {
-    font-size: 9.5px;
-    line-height: 1.4;
-  }
-
-  .cv-section h2 {
-    font-size: 11px;
-    margin-bottom: 6px;
-    break-after: avoid;
-  }
-
-  .cv-section p {
-    margin: 0;
-  }
-
-  .cv-section ul {
-    margin-top: 4px;
-    margin-bottom: 0;
-  }
-
-  .cv-section li {
-    break-inside: avoid;
-  }
-
-  a {
-    text-decoration: none;
   }
 }
 

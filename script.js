@@ -390,7 +390,10 @@ function setupControls() {
     button.addEventListener("click", () => setLanguage(button.dataset.lang));
   });
 
-  document.querySelector("[data-print]")?.addEventListener("click", () => window.print());
+  document.querySelector("[data-print]")?.addEventListener("click", async () => {
+    await document.fonts.ready;
+    window.print();
+  });
 
   const themeButton = document.querySelector(".theme-toggle");
   const savedTheme = localStorage.getItem("portfolio-theme");
