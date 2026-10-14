@@ -273,10 +273,12 @@
       "cv": {
         "headline": "Científico de Datos e Ingeniero de Software",
         "summary": "Científico de datos e ingeniero de software con formación en matemática, estadística y modelado computacional. Experiencia construyendo pipelines reproducibles, APIs, automatización CI/CD y herramientas que integran modelos de aprendizaje automático en sistemas mantenibles.",
+        "sintonizados": "Sintonizados (Nerdearla Vibeathon 2026): diseño y desarrollo integral de un proyecto de transcripción y traducción en vivo para mejorar la accesibilidad en charlas.",
         "projectBullets": [
           "Tesis de Licenciatura (2025–2026): framework reproducible para analizar datos de pose y comparar VAME y Keypoint-MoSeq en categorización no supervisada de comportamiento animal.",
           "STORM: framework para orquestación, evaluación, trazabilidad y reutilización de modelos.",
-          "Taller de Python Científico (2025): curso intensivo para más de 20 participantes sobre adquisición de datos, procesamiento de señales y simulación con SciPy."
+          "Taller de Python Científico (2025): curso intensivo para más de 20 participantes sobre adquisición de datos, procesamiento de señales y simulación con SciPy.",
+          "Participación en SAN 2026."
         ]
       }
     },
@@ -449,10 +451,12 @@
       "cv": {
         "headline": "Data Scientist & Software Engineer",
         "summary": "Data scientist and software engineer with a foundation in mathematics, statistics and computational modeling. Experienced in building reproducible pipelines, APIs, CI/CD automation and tools that integrate machine-learning models into maintainable systems.",
+        "sintonizados": "Sintonizados (Nerdearla Vibeathon 2026): sole designer and developer of a live transcription and translation project to improve accessibility at talks.",
         "projectBullets": [
           "Undergraduate thesis (2025–2026): reproducible framework for pose-data analysis and comparison of VAME and Keypoint-MoSeq for unsupervised animal behavior categorization.",
           "STORM: framework for model orchestration, evaluation, traceability and reuse.",
-          "Scientific Python Workshop (2025): intensive course for over 20 participants on data acquisition, signal processing and physical-system simulation with SciPy."
+          "Scientific Python Workshop (2025): intensive course for over 20 participants on data acquisition, signal processing and physical-system simulation with SciPy.",
+          "Participation in SAN 2026."
         ]
       }
     }

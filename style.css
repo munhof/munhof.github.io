@@ -696,7 +696,7 @@ button {
 }
 
 .cv-section {
-  margin-top: 12px;
+  margin-top: 14px;
   break-inside: auto;
 }
 
@@ -711,8 +711,8 @@ button {
 
 .cv-section p,
 .cv-section li {
-  font-size: 9.5px;
-  line-height: 1.4;
+  font-size: 11px;
+  line-height: 1.35;
 }
 
 .cv-section p {
@@ -742,7 +742,7 @@ button {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 3px 16px;
-  margin-top: 8px;
+  margin-top: 9px;
   break-inside: avoid;
 }
 
